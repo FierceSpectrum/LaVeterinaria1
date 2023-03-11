@@ -34,23 +34,27 @@ namespace LaVeterinaria1
             this.Appellidos = Appellidos;
             this.Direccion = Direccion;
         }
-        public static void Guardar_Cliente(Cliente Cliente)
+        public static bool Guardar_Cliente(Cliente Cliente)
         {
             Cliente.setKey(Return_Key());
-            StreamWriter writer;
-            string RutaArchuivo = "Clientes.txt";
-            if (File.Exists(RutaArchuivo))
-            {
-                writer = File.AppendText(RutaArchuivo);
-            }
-            else
-            {
-                List<Cliente> Usuari;
-                writer = new StreamWriter(RutaArchuivo);
-            }
-            string resultado = Cliente.Return_Info();
-            writer.WriteLine(resultado);
-            writer.Close();
+            if (Verificar_IdCliente(Cliente.getIdentificacion()) != true)
+            { 
+                StreamWriter writer;
+                string RutaArchuivo = "Clientes.txt";
+                if (File.Exists(RutaArchuivo))
+                {
+                    writer = File.AppendText(RutaArchuivo);
+                }
+                else
+                {
+                    List<Cliente> Usuari;
+                    writer = new StreamWriter(RutaArchuivo);
+                }
+                string resultado = Cliente.Return_Info();
+                writer.WriteLine(resultado);
+                writer.Close();
+                return true;
+            }else { return false; }
         }
         public string Return_Info()
         {
@@ -72,7 +76,7 @@ namespace LaVeterinaria1
             reader.Close();
             return Cliente;
         }
-        public bool Verificar_IdCliente(int IdCliente)
+        public static bool Verificar_IdCliente(int IdCliente)
         {
             List<Cliente> Cliente = Cargar_Cliente();
             foreach (Cliente Client in Cliente)

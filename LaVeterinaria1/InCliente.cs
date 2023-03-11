@@ -43,13 +43,19 @@ namespace LaVeterinaria1
         private void button1_Click(object sender, EventArgs e)
         {
             Cliente Client = new Cliente(0,Convert.ToInt32(Txtidentificar.Text), Convert.ToInt32(TxtTelefono.Text), TxtNombre.Text, TxtApellido.Text, TxtDireccion.Text);
-            Cliente.Guardar_Cliente(Client);
-            Txtidentificar.Text = "";
-            TxtTelefono.Text = "";
-            TxtNombre.Text = "";
-            TxtApellido.Text = "";
-            TxtDireccion.Text = "";
-            
+            if (Cliente.Guardar_Cliente(Client) != true)
+            {
+                MessageBox.Show("Actualmente esta cedula ya esta registrada", "Inicio de Secion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Se a Registrado con Exito", "Inicio de Secion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Txtidentificar.Text = "";
+                TxtTelefono.Text = "";
+                TxtNombre.Text = "";
+                TxtApellido.Text = "";
+                TxtDireccion.Text = "";
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
