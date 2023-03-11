@@ -43,17 +43,19 @@
             this.PvMascota = new System.Windows.Forms.Panel();
             this.Cmb_LeerMascota = new System.Windows.Forms.ComboBox();
             this.PMascota = new System.Windows.Forms.Panel();
-            this.TxtDireccion = new System.Windows.Forms.TextBox();
-            this.TxtTelefono = new System.Windows.Forms.TextBox();
-            this.TxtApellido = new System.Windows.Forms.TextBox();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.TxtIndentificacion = new System.Windows.Forms.TextBox();
+            this.TxtPesoan = new System.Windows.Forms.TextBox();
+            this.TxtRazaAn = new System.Windows.Forms.TextBox();
+            this.TxtTipoAni = new System.Windows.Forms.TextBox();
+            this.TxtNombreMas = new System.Windows.Forms.TextBox();
+            this.TxtIndenMascota = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LatIpERRO = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TxtMedida = new System.Windows.Forms.TextBox();
             this.PborrarMascota.SuspendLayout();
             this.PactualizarMas.SuspendLayout();
             this.PvMascota.SuspendLayout();
@@ -255,117 +257,138 @@
             // PMascota
             // 
             this.PMascota.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PMascota.Controls.Add(this.TxtDireccion);
-            this.PMascota.Controls.Add(this.TxtTelefono);
-            this.PMascota.Controls.Add(this.TxtApellido);
-            this.PMascota.Controls.Add(this.TxtNombre);
-            this.PMascota.Controls.Add(this.TxtIndentificacion);
+            this.PMascota.Controls.Add(this.TxtMedida);
+            this.PMascota.Controls.Add(this.label7);
+            this.PMascota.Controls.Add(this.TxtPesoan);
+            this.PMascota.Controls.Add(this.TxtRazaAn);
+            this.PMascota.Controls.Add(this.TxtTipoAni);
+            this.PMascota.Controls.Add(this.TxtNombreMas);
+            this.PMascota.Controls.Add(this.TxtIndenMascota);
             this.PMascota.Controls.Add(this.label6);
             this.PMascota.Controls.Add(this.label5);
             this.PMascota.Controls.Add(this.label4);
-            this.PMascota.Controls.Add(this.label3);
+            this.PMascota.Controls.Add(this.LatIpERRO);
             this.PMascota.Controls.Add(this.label2);
             this.PMascota.Controls.Add(this.label1);
-            this.PMascota.Location = new System.Drawing.Point(218, 27);
+            this.PMascota.Location = new System.Drawing.Point(231, 27);
             this.PMascota.Name = "PMascota";
-            this.PMascota.Size = new System.Drawing.Size(313, 220);
+            this.PMascota.Size = new System.Drawing.Size(313, 272);
             this.PMascota.TabIndex = 28;
             this.PMascota.Visible = false;
             // 
-            // TxtDireccion
+            // TxtPesoan
             // 
-            this.TxtDireccion.Location = new System.Drawing.Point(126, 188);
-            this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.Size = new System.Drawing.Size(141, 20);
-            this.TxtDireccion.TabIndex = 10;
+            this.TxtPesoan.Location = new System.Drawing.Point(126, 188);
+            this.TxtPesoan.Name = "TxtPesoan";
+            this.TxtPesoan.Size = new System.Drawing.Size(141, 20);
+            this.TxtPesoan.TabIndex = 10;
             // 
-            // TxtTelefono
+            // TxtRazaAn
             // 
-            this.TxtTelefono.Location = new System.Drawing.Point(126, 162);
-            this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(141, 20);
-            this.TxtTelefono.TabIndex = 9;
+            this.TxtRazaAn.Location = new System.Drawing.Point(126, 162);
+            this.TxtRazaAn.Name = "TxtRazaAn";
+            this.TxtRazaAn.Size = new System.Drawing.Size(141, 20);
+            this.TxtRazaAn.TabIndex = 9;
             // 
-            // TxtApellido
+            // TxtTipoAni
             // 
-            this.TxtApellido.Location = new System.Drawing.Point(126, 133);
-            this.TxtApellido.Name = "TxtApellido";
-            this.TxtApellido.Size = new System.Drawing.Size(141, 20);
-            this.TxtApellido.TabIndex = 8;
+            this.TxtTipoAni.Location = new System.Drawing.Point(126, 133);
+            this.TxtTipoAni.Name = "TxtTipoAni";
+            this.TxtTipoAni.Size = new System.Drawing.Size(141, 20);
+            this.TxtTipoAni.TabIndex = 8;
             // 
-            // TxtNombre
+            // TxtNombreMas
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(126, 102);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(141, 20);
-            this.TxtNombre.TabIndex = 7;
+            this.TxtNombreMas.Location = new System.Drawing.Point(126, 102);
+            this.TxtNombreMas.Name = "TxtNombreMas";
+            this.TxtNombreMas.Size = new System.Drawing.Size(141, 20);
+            this.TxtNombreMas.TabIndex = 7;
             // 
-            // TxtIndentificacion
+            // TxtIndenMascota
             // 
-            this.TxtIndentificacion.Location = new System.Drawing.Point(126, 76);
-            this.TxtIndentificacion.Name = "TxtIndentificacion";
-            this.TxtIndentificacion.Size = new System.Drawing.Size(141, 20);
-            this.TxtIndentificacion.TabIndex = 6;
+            this.TxtIndenMascota.Location = new System.Drawing.Point(126, 76);
+            this.TxtIndenMascota.Name = "TxtIndenMascota";
+            this.TxtIndenMascota.Size = new System.Drawing.Size(141, 20);
+            this.TxtIndenMascota.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("New York", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(62, 26);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 15);
+            this.label6.Size = new System.Drawing.Size(198, 16);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Ingrese los Datos";
+            this.label6.Text = "Ingrese los datos de la Mascota";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("New York", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 193);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 192);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 15);
+            this.label5.Size = new System.Drawing.Size(42, 16);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Direccion:";
+            this.label5.Text = "Peso:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("New York", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 168);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(11, 166);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 15);
+            this.label4.Size = new System.Drawing.Size(42, 16);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Teléfono:";
+            this.label4.Text = "Raza:";
             // 
-            // label3
+            // LatIpERRO
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("New York", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Apellido:";
+            this.LatIpERRO.AutoSize = true;
+            this.LatIpERRO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LatIpERRO.Location = new System.Drawing.Point(11, 137);
+            this.LatIpERRO.Name = "LatIpERRO";
+            this.LatIpERRO.Size = new System.Drawing.Size(101, 16);
+            this.LatIpERRO.TabIndex = 2;
+            this.LatIpERRO.Text = "Tipo de Animal:";
+            this.LatIpERRO.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("New York", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 107);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 15);
+            this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("New York", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(11, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 15);
+            this.label1.Size = new System.Drawing.Size(88, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Identificacion:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(11, 219);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 16);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Medida:";
+            // 
+            // TxtMedida
+            // 
+            this.TxtMedida.Location = new System.Drawing.Point(126, 215);
+            this.TxtMedida.Name = "TxtMedida";
+            this.TxtMedida.Size = new System.Drawing.Size(141, 20);
+            this.TxtMedida.TabIndex = 13;
             // 
             // CrudMascota
             // 
@@ -413,16 +436,18 @@
         private System.Windows.Forms.Panel PvMascota;
         private System.Windows.Forms.ComboBox Cmb_LeerMascota;
         private System.Windows.Forms.Panel PMascota;
-        private System.Windows.Forms.TextBox TxtDireccion;
-        private System.Windows.Forms.TextBox TxtTelefono;
-        private System.Windows.Forms.TextBox TxtApellido;
-        private System.Windows.Forms.TextBox TxtNombre;
-        private System.Windows.Forms.TextBox TxtIndentificacion;
+        private System.Windows.Forms.TextBox TxtPesoan;
+        private System.Windows.Forms.TextBox TxtRazaAn;
+        private System.Windows.Forms.TextBox TxtTipoAni;
+        private System.Windows.Forms.TextBox TxtNombreMas;
+        private System.Windows.Forms.TextBox TxtIndenMascota;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LatIpERRO;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox TxtMedida;
     }
 }

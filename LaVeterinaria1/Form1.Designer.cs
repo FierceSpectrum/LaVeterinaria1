@@ -55,7 +55,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BtnMini = new System.Windows.Forms.PictureBox();
             this.BTitulo = new System.Windows.Forms.Panel();
-            this.Var = new System.Windows.Forms.Label();
             this.PVertical.SuspendLayout();
             this.PSubmenu.SuspendLayout();
             this.SubReportes.SuspendLayout();
@@ -71,7 +70,6 @@
             // PVertical
             // 
             this.PVertical.BackColor = System.Drawing.Color.Aqua;
-            this.PVertical.Controls.Add(this.Var);
             this.PVertical.Controls.Add(this.PSubmenu);
             this.PVertical.Controls.Add(this.SubReportes);
             this.PVertical.Controls.Add(this.BtnOpciones);
@@ -460,15 +458,6 @@
             this.BTitulo.Size = new System.Drawing.Size(818, 42);
             this.BTitulo.TabIndex = 3;
             // 
-            // Var
-            // 
-            this.Var.AutoSize = true;
-            this.Var.Location = new System.Drawing.Point(76, 615);
-            this.Var.Name = "Var";
-            this.Var.Size = new System.Drawing.Size(35, 13);
-            this.Var.TabIndex = 7;
-            this.Var.Text = "label2";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -482,7 +471,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.PVertical.ResumeLayout(false);
-            this.PVertical.PerformLayout();
             this.PSubmenu.ResumeLayout(false);
             this.SubReportes.ResumeLayout(false);
             this.Subcrud.ResumeLayout(false);
@@ -524,7 +512,6 @@
         private System.Windows.Forms.Button BtnEdicliente;
         private System.Windows.Forms.Button BtnEmedicamentos;
         private System.Windows.Forms.Button BtnEdenfermedad;
-        public System.Windows.Forms.Label Var;
     }
 }
 

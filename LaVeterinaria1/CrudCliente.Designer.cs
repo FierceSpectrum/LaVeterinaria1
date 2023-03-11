@@ -34,26 +34,26 @@
             this.BtnCcliente = new System.Windows.Forms.Button();
             this.BtnBoCliente = new System.Windows.Forms.Button();
             this.PVercliente = new System.Windows.Forms.Panel();
+            this.Cmb_Leercliente = new System.Windows.Forms.ComboBox();
             this.Pactualizar = new System.Windows.Forms.Panel();
+            this.Cmb_Acliente = new System.Windows.Forms.ComboBox();
             this.PborrarCliente = new System.Windows.Forms.Panel();
-            this.PCcliente = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TxtIndentificacion = new System.Windows.Forms.TextBox();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.TxtApellido = new System.Windows.Forms.TextBox();
-            this.TxtTelefono = new System.Windows.Forms.TextBox();
-            this.TxtDireccion = new System.Windows.Forms.TextBox();
+            this.Cmb_BorrarCliente = new System.Windows.Forms.ComboBox();
             this.BtnAceptar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
-            this.Cmb_Leercliente = new System.Windows.Forms.ComboBox();
-            this.Cmb_Acliente = new System.Windows.Forms.ComboBox();
-            this.Cmb_BorrarCliente = new System.Windows.Forms.ComboBox();
+            this.PCcliente = new System.Windows.Forms.Panel();
+            this.TxtDireccion = new System.Windows.Forms.TextBox();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.TxtApellido = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtIndentificacion = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.PVercliente.SuspendLayout();
             this.Pactualizar.SuspendLayout();
             this.PborrarCliente.SuspendLayout();
@@ -138,6 +138,22 @@
             this.PVercliente.Visible = false;
             this.PVercliente.Paint += new System.Windows.Forms.PaintEventHandler(this.PVercliente_Paint);
             // 
+            // Cmb_Leercliente
+            // 
+            this.Cmb_Leercliente.FormattingEnabled = true;
+            this.Cmb_Leercliente.Items.AddRange(new object[] {
+            "Hola\t",
+            "que",
+            "hace",
+            "todo",
+            "bien?"});
+            this.Cmb_Leercliente.Location = new System.Drawing.Point(4, 4);
+            this.Cmb_Leercliente.Margin = new System.Windows.Forms.Padding(4);
+            this.Cmb_Leercliente.Name = "Cmb_Leercliente";
+            this.Cmb_Leercliente.Size = new System.Drawing.Size(180, 21);
+            this.Cmb_Leercliente.TabIndex = 6;
+            this.Cmb_Leercliente.SelectedIndexChanged += new System.EventHandler(this.Cmb_Leercliente_SelectedIndexChanged);
+            // 
             // Pactualizar
             // 
             this.Pactualizar.Controls.Add(this.Cmb_Acliente);
@@ -146,6 +162,21 @@
             this.Pactualizar.Size = new System.Drawing.Size(202, 37);
             this.Pactualizar.TabIndex = 12;
             this.Pactualizar.Visible = false;
+            // 
+            // Cmb_Acliente
+            // 
+            this.Cmb_Acliente.FormattingEnabled = true;
+            this.Cmb_Acliente.Items.AddRange(new object[] {
+            "Amarillo",
+            "Azul",
+            "Rojo",
+            "Verde",
+            "Negro"});
+            this.Cmb_Acliente.Location = new System.Drawing.Point(4, 4);
+            this.Cmb_Acliente.Margin = new System.Windows.Forms.Padding(4);
+            this.Cmb_Acliente.Name = "Cmb_Acliente";
+            this.Cmb_Acliente.Size = new System.Drawing.Size(180, 21);
+            this.Cmb_Acliente.TabIndex = 6;
             // 
             // PborrarCliente
             // 
@@ -156,120 +187,20 @@
             this.PborrarCliente.TabIndex = 12;
             this.PborrarCliente.Visible = false;
             // 
-            // PCcliente
+            // Cmb_BorrarCliente
             // 
-            this.PCcliente.Controls.Add(this.TxtDireccion);
-            this.PCcliente.Controls.Add(this.TxtTelefono);
-            this.PCcliente.Controls.Add(this.TxtApellido);
-            this.PCcliente.Controls.Add(this.TxtNombre);
-            this.PCcliente.Controls.Add(this.TxtIndentificacion);
-            this.PCcliente.Controls.Add(this.label6);
-            this.PCcliente.Controls.Add(this.label5);
-            this.PCcliente.Controls.Add(this.label4);
-            this.PCcliente.Controls.Add(this.label3);
-            this.PCcliente.Controls.Add(this.label2);
-            this.PCcliente.Controls.Add(this.label1);
-            this.PCcliente.Location = new System.Drawing.Point(235, 50);
-            this.PCcliente.Name = "PCcliente";
-            this.PCcliente.Size = new System.Drawing.Size(313, 220);
-            this.PCcliente.TabIndex = 13;
-            this.PCcliente.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("New York", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Identificacion:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("New York", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("New York", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Apellido:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("New York", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 168);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Teléfono:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("New York", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 193);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Direccion:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("New York", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(62, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 15);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Ingrese los Datos";
-            // 
-            // TxtIndentificacion
-            // 
-            this.TxtIndentificacion.Location = new System.Drawing.Point(126, 76);
-            this.TxtIndentificacion.Name = "TxtIndentificacion";
-            this.TxtIndentificacion.Size = new System.Drawing.Size(141, 20);
-            this.TxtIndentificacion.TabIndex = 6;
-            // 
-            // TxtNombre
-            // 
-            this.TxtNombre.Location = new System.Drawing.Point(126, 102);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(141, 20);
-            this.TxtNombre.TabIndex = 7;
-            // 
-            // TxtApellido
-            // 
-            this.TxtApellido.Location = new System.Drawing.Point(126, 133);
-            this.TxtApellido.Name = "TxtApellido";
-            this.TxtApellido.Size = new System.Drawing.Size(141, 20);
-            this.TxtApellido.TabIndex = 8;
-            // 
-            // TxtTelefono
-            // 
-            this.TxtTelefono.Location = new System.Drawing.Point(126, 162);
-            this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(141, 20);
-            this.TxtTelefono.TabIndex = 9;
-            // 
-            // TxtDireccion
-            // 
-            this.TxtDireccion.Location = new System.Drawing.Point(126, 188);
-            this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.Size = new System.Drawing.Size(141, 20);
-            this.TxtDireccion.TabIndex = 10;
+            this.Cmb_BorrarCliente.FormattingEnabled = true;
+            this.Cmb_BorrarCliente.Items.AddRange(new object[] {
+            "Amarillo",
+            "Azul",
+            "Rojo",
+            "Verde",
+            "Negro"});
+            this.Cmb_BorrarCliente.Location = new System.Drawing.Point(4, 6);
+            this.Cmb_BorrarCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.Cmb_BorrarCliente.Name = "Cmb_BorrarCliente";
+            this.Cmb_BorrarCliente.Size = new System.Drawing.Size(180, 21);
+            this.Cmb_BorrarCliente.TabIndex = 6;
             // 
             // BtnAceptar
             // 
@@ -319,50 +250,120 @@
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = false;
             // 
-            // Cmb_Leercliente
+            // PCcliente
             // 
-            this.Cmb_Leercliente.FormattingEnabled = true;
-            this.Cmb_Leercliente.Items.AddRange(new object[] {
-            "Hola\t",
-            "que",
-            "hace",
-            "todo",
-            "bien?"});
-            this.Cmb_Leercliente.Location = new System.Drawing.Point(4, 4);
-            this.Cmb_Leercliente.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_Leercliente.Name = "Cmb_Leercliente";
-            this.Cmb_Leercliente.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_Leercliente.TabIndex = 6;
+            this.PCcliente.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PCcliente.Controls.Add(this.TxtDireccion);
+            this.PCcliente.Controls.Add(this.TxtTelefono);
+            this.PCcliente.Controls.Add(this.TxtApellido);
+            this.PCcliente.Controls.Add(this.TxtNombre);
+            this.PCcliente.Controls.Add(this.TxtIndentificacion);
+            this.PCcliente.Controls.Add(this.label6);
+            this.PCcliente.Controls.Add(this.label5);
+            this.PCcliente.Controls.Add(this.label4);
+            this.PCcliente.Controls.Add(this.label3);
+            this.PCcliente.Controls.Add(this.label2);
+            this.PCcliente.Controls.Add(this.label1);
+            this.PCcliente.Location = new System.Drawing.Point(257, 50);
+            this.PCcliente.Name = "PCcliente";
+            this.PCcliente.Size = new System.Drawing.Size(313, 220);
+            this.PCcliente.TabIndex = 28;
+            this.PCcliente.Visible = false;
             // 
-            // Cmb_Acliente
+            // TxtDireccion
             // 
-            this.Cmb_Acliente.FormattingEnabled = true;
-            this.Cmb_Acliente.Items.AddRange(new object[] {
-            "Amarillo",
-            "Azul",
-            "Rojo",
-            "Verde",
-            "Negro"});
-            this.Cmb_Acliente.Location = new System.Drawing.Point(4, 4);
-            this.Cmb_Acliente.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_Acliente.Name = "Cmb_Acliente";
-            this.Cmb_Acliente.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_Acliente.TabIndex = 6;
+            this.TxtDireccion.Location = new System.Drawing.Point(126, 188);
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.Size = new System.Drawing.Size(141, 20);
+            this.TxtDireccion.TabIndex = 10;
             // 
-            // Cmb_BorrarCliente
+            // TxtTelefono
             // 
-            this.Cmb_BorrarCliente.FormattingEnabled = true;
-            this.Cmb_BorrarCliente.Items.AddRange(new object[] {
-            "Amarillo",
-            "Azul",
-            "Rojo",
-            "Verde",
-            "Negro"});
-            this.Cmb_BorrarCliente.Location = new System.Drawing.Point(4, 6);
-            this.Cmb_BorrarCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_BorrarCliente.Name = "Cmb_BorrarCliente";
-            this.Cmb_BorrarCliente.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_BorrarCliente.TabIndex = 6;
+            this.TxtTelefono.Location = new System.Drawing.Point(126, 162);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(141, 20);
+            this.TxtTelefono.TabIndex = 9;
+            // 
+            // TxtApellido
+            // 
+            this.TxtApellido.Location = new System.Drawing.Point(126, 133);
+            this.TxtApellido.Name = "TxtApellido";
+            this.TxtApellido.Size = new System.Drawing.Size(141, 20);
+            this.TxtApellido.TabIndex = 8;
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Location = new System.Drawing.Point(126, 102);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(141, 20);
+            this.TxtNombre.TabIndex = 7;
+            // 
+            // TxtIndentificacion
+            // 
+            this.TxtIndentificacion.Location = new System.Drawing.Point(126, 76);
+            this.TxtIndentificacion.Name = "TxtIndentificacion";
+            this.TxtIndentificacion.Size = new System.Drawing.Size(141, 20);
+            this.TxtIndentificacion.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(105, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 16);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Ingrese los Datos ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 193);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Direccion:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(13, 168);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Teléfono:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 138);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Apellido:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nombre:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Identificacion:";
             // 
             // CrudCliente
             // 
@@ -371,10 +372,10 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(641, 525);
+            this.Controls.Add(this.PCcliente);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnAceptar);
-            this.Controls.Add(this.PCcliente);
             this.Controls.Add(this.PborrarCliente);
             this.Controls.Add(this.Pactualizar);
             this.Controls.Add(this.PVercliente);
@@ -403,23 +404,23 @@
         private System.Windows.Forms.Panel PVercliente;
         private System.Windows.Forms.Panel Pactualizar;
         private System.Windows.Forms.Panel PborrarCliente;
-        private System.Windows.Forms.Panel PCcliente;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TxtDireccion;
-        private System.Windows.Forms.TextBox TxtTelefono;
-        private System.Windows.Forms.TextBox TxtApellido;
-        private System.Windows.Forms.TextBox TxtNombre;
-        private System.Windows.Forms.TextBox TxtIndentificacion;
         private System.Windows.Forms.Button BtnAceptar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.ComboBox Cmb_Leercliente;
         private System.Windows.Forms.ComboBox Cmb_Acliente;
         private System.Windows.Forms.ComboBox Cmb_BorrarCliente;
+        private System.Windows.Forms.Panel PCcliente;
+        private System.Windows.Forms.TextBox TxtDireccion;
+        private System.Windows.Forms.TextBox TxtTelefono;
+        private System.Windows.Forms.TextBox TxtApellido;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.TextBox TxtIndentificacion;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

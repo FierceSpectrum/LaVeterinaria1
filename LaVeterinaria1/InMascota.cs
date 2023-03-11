@@ -91,5 +91,11 @@ namespace LaVeterinaria1
         {
 
         }
+
+        private void BtnAgreEnfe_Click(object sender, EventArgs e)
+        {
+            Panel pane2 = Form1.mipanel;
+            Funciones.Abrirfh(new InEnfermedad(), pane2);
+        }
     }
 }

@@ -12,6 +12,13 @@ namespace LaVeterinaria1
 {
     public partial class CrudMascota : Form
     {
+        public void CerrarVentanas()
+        {
+            PMascota.Visible = false;
+            PvMascota.Visible = false;
+            PactualizarMas.Visible = false;
+            PborrarMascota.Visible = false;
+        }
         public CrudMascota()
         {
             InitializeComponent();
@@ -24,18 +31,48 @@ namespace LaVeterinaria1
 
         private void Btnleercliente_Click(object sender, EventArgs e)
         {
-            PvMascota.Visible = true;
+            switch (PvMascota.Visible)
+            {
+                case true:
+                    CerrarVentanas();
+                    PvMascota.Visible = false;
+                    break;
+                case false:
+                    CerrarVentanas();
+                    PvMascota.Visible = true;
+                    break;
+            }
 
         }
 
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
-            PactualizarMas.Visible = true;
+            switch (PactualizarMas.Visible)
+            {
+                case true:
+                    CerrarVentanas();
+                    PactualizarMas.Visible = false;
+                    break;
+                case false:
+                    CerrarVentanas();
+                    PactualizarMas.Visible = true;
+                    break;
+            }
         }
 
         private void BtnBoCliente_Click(object sender, EventArgs e)
         {
-            PborrarMascota.Visible = true;
+            switch (PborrarMascota.Visible)
+            {
+                case true:
+                    CerrarVentanas();
+                    PborrarMascota.Visible = false;
+                    break;
+                case false:
+                    CerrarVentanas();
+                    PborrarMascota.Visible = true;
+                    break;
+            }
         }
 
         private void PvMascota_Paint(object sender, PaintEventArgs e)
@@ -45,7 +82,27 @@ namespace LaVeterinaria1
 
         private void BtnCcliente_Click(object sender, EventArgs e)
         {
-            PMascota.Visible = true;
+            switch (PMascota.Visible)
+            {
+                case true:
+                    CerrarVentanas();
+                   PMascota.Visible = false;
+                    break;
+                case false:
+                    CerrarVentanas();
+                    PMascota.Visible = true;
+                    break;
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

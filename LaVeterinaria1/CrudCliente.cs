@@ -15,6 +15,13 @@ namespace LaVeterinaria1
 {
     public partial class CrudCliente : Form
     {
+        public void CerrarVentanas()
+        {
+            PCcliente.Visible = false;
+            PVercliente.Visible = false;
+            Pactualizar.Visible = false;
+            PborrarCliente.Visible = false;
+        }
         public CrudCliente()
         {
             InitializeComponent();
@@ -22,18 +29,36 @@ namespace LaVeterinaria1
 
         private void Btnleercliente_Click(object sender, EventArgs e)
         {
-            PVercliente.Visible = true;
-            //PVercliente.Visible = true;
-            //if (this.PContenedor.Controls.Count > 0)
-            //{
-            //    this.PContenedor.Controls.RemoveAt(0);
-            //}
+            
+            switch (PVercliente.Visible)
+            {
+                case true:
+                    CerrarVentanas();
+                    PVercliente.Visible = false;
+                    break;
+                case false:
+                    CerrarVentanas();
+                    PVercliente.Visible = true;
+                    break;
+            }
 
         }
 
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
-            Pactualizar.Visible = true;
+            switch (Pactualizar.Visible)
+            {
+                case true:
+                    CerrarVentanas();
+                    Pactualizar.Visible = false;
+                    break;
+                case false:
+                    CerrarVentanas();
+                   Pactualizar.Visible = true;
+                    break;
+            }
+
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -43,7 +68,17 @@ namespace LaVeterinaria1
 
         private void BtnCcliente_Click(object sender, EventArgs e)
         {
-            PCcliente.Visible = true;
+            switch (PCcliente.Visible)
+            {
+                case true:
+                    CerrarVentanas();
+                   PCcliente.Visible = false;
+                    break;
+                case false:
+                    CerrarVentanas();
+                   PCcliente.Visible = true;
+                    break;
+            }
         }
 
         private void PVercliente_Paint(object sender, PaintEventArgs e)
@@ -53,7 +88,22 @@ namespace LaVeterinaria1
 
         private void BtnBoCliente_Click(object sender, EventArgs e)
         {
-            PborrarCliente.Visible = true;
+            switch (PborrarCliente.Visible)
+            {
+                case true:
+                    CerrarVentanas();
+                    PborrarCliente.Visible = false;
+                    break;
+                case false:
+                    CerrarVentanas();
+                    PborrarCliente.Visible = true;
+                    break;
+            }
+        }
+
+        private void Cmb_Leercliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

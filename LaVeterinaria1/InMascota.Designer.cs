@@ -45,6 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtRaza = new System.Windows.Forms.TextBox();
+            this.BtnAgreEnfe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TxtIDdueño
@@ -89,8 +90,8 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("New York", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(271, 411);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(263, 411);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 23);
             this.button3.TabIndex = 39;
@@ -100,8 +101,8 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("New York", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(156, 411);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(135, 411);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 23);
             this.button2.TabIndex = 38;
@@ -111,8 +112,8 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("New York", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(26, 411);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(5, 411);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 23);
             this.button1.TabIndex = 37;
@@ -124,10 +125,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Font = new System.Drawing.Font("New York", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(22, 243);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 19);
+            this.label7.Size = new System.Drawing.Size(49, 20);
             this.label7.TabIndex = 36;
             this.label7.Text = "Peso:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -136,10 +137,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Font = new System.Drawing.Font("New York", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(22, 104);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 19);
+            this.label6.Size = new System.Drawing.Size(69, 20);
             this.label6.TabIndex = 35;
             this.label6.Text = "Nombre:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -148,10 +149,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Font = new System.Drawing.Font("New York", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(22, 148);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 19);
+            this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 34;
             this.label5.Text = "Tipo Animal:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -160,10 +161,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Font = new System.Drawing.Font("New York", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(22, 196);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 19);
+            this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 33;
             this.label4.Text = "Raza:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -172,10 +173,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Font = new System.Drawing.Font("New York", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(22, 286);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 19);
+            this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 32;
             this.label3.Text = "Medida:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -184,10 +185,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Font = new System.Drawing.Font("New York", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(86, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(351, 25);
+            this.label2.Size = new System.Drawing.Size(319, 25);
             this.label2.TabIndex = 31;
             this.label2.Text = "Ingrese los Datos de la mascota";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -196,10 +197,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Font = new System.Drawing.Font("New York", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(22, 328);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 19);
+            this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 45;
             this.label1.Text = "Identificacion:";
             // 
@@ -210,12 +211,24 @@
             this.TxtRaza.Size = new System.Drawing.Size(193, 20);
             this.TxtRaza.TabIndex = 46;
             // 
-            // Mascota
+            // BtnAgreEnfe
+            // 
+            this.BtnAgreEnfe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgreEnfe.Location = new System.Drawing.Point(379, 411);
+            this.BtnAgreEnfe.Name = "BtnAgreEnfe";
+            this.BtnAgreEnfe.Size = new System.Drawing.Size(177, 23);
+            this.BtnAgreEnfe.TabIndex = 47;
+            this.BtnAgreEnfe.Text = "Agregar enfermedad";
+            this.BtnAgreEnfe.UseVisualStyleBackColor = true;
+            this.BtnAgreEnfe.Click += new System.EventHandler(this.BtnAgreEnfe_Click);
+            // 
+            // InMascota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(500, 468);
+            this.ClientSize = new System.Drawing.Size(568, 482);
+            this.Controls.Add(this.BtnAgreEnfe);
             this.Controls.Add(this.TxtRaza);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtIDdueño);
@@ -233,7 +246,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Mascota";
+            this.Name = "InMascota";
             this.Text = "Mascota";
             this.Load += new System.EventHandler(this.Mascota_Load);
             this.ResumeLayout(false);
@@ -259,5 +272,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtRaza;
+        private System.Windows.Forms.Button BtnAgreEnfe;
     }
 }
