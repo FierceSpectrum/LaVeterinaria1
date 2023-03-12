@@ -56,3 +56,5 @@ C:\Users\josa1\Source\Repos\LaVeterinaria1\LaVeterinaria1\obj\Debug\LaVeterinari
 C:\Users\josa1\Source\Repos\LaVeterinaria1\LaVeterinaria1\obj\Debug\LaVeterinaria1.pdb
 C:\Users\josa1\Source\Repos\LaVeterinaria1\LaVeterinaria1\obj\Debug\LaVeterinaria1.CrudEnfermedad.resources
 C:\Users\josa1\Source\Repos\LaVeterinaria1\LaVeterinaria1\obj\Debug\LaVeterinaria1.CrudMedicamentos.resources
+C:\Users\benja\source\repos\LaVeterinaria1\LaVeterinaria1\obj\Debug\LaVeterinaria1.CrudEnfermedad.resources
+C:\Users\benja\source\repos\LaVeterinaria1\LaVeterinaria1\obj\Debug\LaVeterinaria1.CrudMedicamentos.resources

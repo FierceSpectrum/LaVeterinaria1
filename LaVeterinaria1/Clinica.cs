@@ -13,7 +13,7 @@ namespace LaVeterinaria1
 
     public class Enfermedad
     {
-        private int Key, IdMascota;
+        private int Key, IdMascota, KeyMascota;
         private string NEfermedad;
 
         public Enfermedad()
@@ -21,12 +21,15 @@ namespace LaVeterinaria1
             this.Key = 0;
             this.IdMascota = 0;
             this.NEfermedad = "";
+            this.KeyMascota = 0;
+
         }
-        public Enfermedad(int Key, int IdMascota, string NEfermedad)
+        public Enfermedad(int Key, int IdMascota, string NEfermedad, int KeyMascota)
         {
             this.Key = Key;
             this.IdMascota = IdMascota;
             this.NEfermedad = NEfermedad;
+            this.KeyMascota = KeyMascota;
         }
         public static bool Guardar_Enfermedad(Enfermedad Enfermedad)
         {
@@ -53,7 +56,7 @@ namespace LaVeterinaria1
         }
         public string Return_Info()
         {
-            string Resultado = Key + ";" + IdMascota + ";" + NEfermedad;
+            string Resultado = Key + ";" + IdMascota + ";" + NEfermedad + ";" + KeyMascota;
             return Resultado;
         }
         public static List<Enfermedad> Cargar_Enfermedad()
@@ -65,7 +68,7 @@ namespace LaVeterinaria1
             while ((line = reader.ReadLine()) != null)
             {
                 string[] valores = line.Split(';');
-                Disease = new Enfermedad(Convert.ToInt16(valores[0]), Convert.ToInt16(valores[1]), valores[2]);
+                Disease = new Enfermedad(Convert.ToInt16(valores[0]), Convert.ToInt16(valores[1]), valores[2], Convert.ToInt16(valores[3]));
                 Enfermedad.Add(Disease);
             }
             reader.Close();
@@ -73,10 +76,10 @@ namespace LaVeterinaria1
         }
         public static bool Verificar_IdCliente(int IdCliente)
         {
-            List<Enfermedad> Enfermedad = Cargar_Enfermedad();
-            foreach (Enfermedad Disease in Enfermedad)
+            List<Mascota> Mascotas = Mascota.Cargar_Mascota();
+            foreach (Mascota Mascota in Mascotas)
             {
-                int ID = Disease.getIdMascota();
+                int ID = Mascota.getIdCliente();
                 if (IdCliente == ID)
                 {
                     return true;
@@ -99,7 +102,6 @@ namespace LaVeterinaria1
                     return key;
                 }
                 else { reader.Close(); return 1; }
-                return 1;
             }
             else { return 1; }
         }
@@ -123,22 +125,32 @@ namespace LaVeterinaria1
         {
             return this.IdMascota = IdMascota;
         }
+        public int getKeyMascota()
+        {
+            return this.KeyMascota;
+        }
+        public int setKeyMascota(int KeyMascota)
+        {
+            return this.KeyMascota = KeyMascota;
+        }
     }
     public class Medicamento
     {
-        private int Key, IdEfermedad;
+        private int Key, IdEfermedad, KeyEnfermedad;
         private string NMedicamento;
         public Medicamento()
         {
             this.Key = 0;
             this.IdEfermedad = 0;
             this.NMedicamento = "";
+            this.KeyEnfermedad = 0;
         }
-        public Medicamento(int Key, int IdEfermedad, string NMedicamento)
+        public Medicamento(int Key, int IdEfermedad, string NMedicamento, int KeyEnfermedad)
         {
             this.Key = Key;
             this.IdEfermedad = IdEfermedad;
             this.NMedicamento = NMedicamento;
+            this.KeyEnfermedad = KeyEnfermedad;
         }
         public static bool Guardar_Medicamento(Medicamento Medicamento)
         {
@@ -165,7 +177,7 @@ namespace LaVeterinaria1
         }
         public string Return_Info()
         {
-            string Resultado = Key + ";" + IdEfermedad + ";" + NMedicamento;
+            string Resultado = Key + ";" + IdEfermedad + ";" + NMedicamento + ";" + KeyEnfermedad;
             return Resultado;
         }
         public static List<Medicamento> Cargar_Medicamento()
@@ -177,7 +189,7 @@ namespace LaVeterinaria1
             while ((line = reader.ReadLine()) != null)
             {
                 string[] valores = line.Split(';');
-                Medicine = new Medicamento(Convert.ToInt16(valores[0]), Convert.ToInt16(valores[1]), valores[2]);
+                Medicine = new Medicamento(Convert.ToInt16(valores[0]), Convert.ToInt16(valores[1]), valores[2], Convert.ToInt16(valores[3]));
                 Medicamento.Add(Medicine);
             }
             reader.Close();
@@ -211,7 +223,6 @@ namespace LaVeterinaria1
                     return key;
                 }
                 else { reader.Close(); return 1; }
-                return 1;
             }
             else { return 1; }
         }

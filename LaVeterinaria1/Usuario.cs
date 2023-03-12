@@ -104,7 +104,6 @@ namespace LaVeterinaria1
                     return key;
                 }
                 else { reader.Close(); return 1; }
-                return 1;
             }
             else { return 1; }
         }
@@ -226,7 +225,6 @@ namespace LaVeterinaria1
                     return key;
                 }
                 else { reader.Close(); return 1; }
-                return 1;
             }
             else { return 1; }
         }
@@ -242,6 +240,47 @@ namespace LaVeterinaria1
         {
             return this.Key = Key;
         }
+        public string getNombre()
+        {
+            return this.Nombre;
+        }
+        public string setNombre(string Nombre)
+        {
+            return this.Nombre = Nombre;
+        }
+        public string getTipoAnimal()
+        {
+            return this.TipoAnimal;
+        }
+        public string setTipoAnimal(string TipoAnimal)
+        {
+            return this.TipoAnimal = TipoAnimal;
+        }
+        public string getRaza()
+        {
+            return this.Raza;
+        }
+        public string setRaza(string Raza)
+        {
+            return this.Raza = Raza;
+        }
+        public int getPeso()
+        {
+            return this.Peso;
+        }
+        public int setPeso(int Peso)
+        {
+            return this.Peso = Peso;
+        }
+        public int getMedida()
+        {
+            return this.Medida;
+        }
+        public int setMedida(int Medida)
+        {
+            return this.Medida = Medida;
+        }
+
         public int getIdCliente()
         {
             return this.IdCliente;

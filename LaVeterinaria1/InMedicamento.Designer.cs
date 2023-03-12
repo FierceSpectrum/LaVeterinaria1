@@ -42,7 +42,7 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("New York", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(247, 438);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 23);
@@ -53,7 +53,7 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("New York", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(132, 438);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 23);
@@ -64,7 +64,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("New York", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(2, 438);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 23);
@@ -102,10 +102,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Font = new System.Drawing.Font("New York", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 143);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 19);
+            this.label3.Size = new System.Drawing.Size(105, 20);
             this.label3.TabIndex = 48;
             this.label3.Text = "Medicamento";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -114,22 +114,22 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Font = new System.Drawing.Font("New York", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 19);
+            this.label2.Size = new System.Drawing.Size(107, 20);
             this.label2.TabIndex = 47;
-            this.label2.Text = "Id de Mascota:";
+            this.label2.Text = "Identificacion:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Font = new System.Drawing.Font("New York", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(159, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 23);
+            this.label1.Size = new System.Drawing.Size(204, 24);
             this.label1.TabIndex = 46;
             this.label1.Text = "Registrar Medicamento\r\n";
             this.label1.Click += new System.EventHandler(this.label1_Click);

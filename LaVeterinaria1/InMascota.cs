@@ -27,11 +27,11 @@ namespace LaVeterinaria1
             Mascota Mascota = new Mascota(0, TxtNMascota.Text, TxtTipoAnimal.Text, TxtRaza.Text, Convert.ToInt32(TxtPeso.Text), Convert.ToInt32(TxtMedida.Text), Convert.ToInt32(TxtIDdueño.Text));
             if (Mascota.Guardar_Mascota(Mascota) != true)
             {
-                MessageBox.Show("Actualmente esta cedula no esta registrada", "Inicio de Secion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Esta Id no esta registrada", "Mascota", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Se a Registrado con Exito", "Inicio de Secion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Se a Registrado con Exito", "Mascota", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TxtNMascota.Text = "";
                 TxtTipoAnimal.Text = "";
                 TxtRaza.Text = "";
