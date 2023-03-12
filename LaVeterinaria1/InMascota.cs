@@ -24,7 +24,21 @@ namespace LaVeterinaria1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Mascota Mascota = new Mascota(0, TxtNMascota.Text, TxtTipoAnimal.Text, TxtRaza.Text, Convert.ToInt32(TxtPeso.Text), Convert.ToInt32(TxtMedida.Text), Convert.ToInt32(TxtIDdueño.Text));
+            if (Mascota.Guardar_Mascota(Mascota) != true)
+            {
+                MessageBox.Show("Actualmente esta cedula no esta registrada", "Inicio de Secion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Se a Registrado con Exito", "Inicio de Secion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TxtNMascota.Text = "";
+                TxtTipoAnimal.Text = "";
+                TxtRaza.Text = "";
+                TxtPeso.Text = "";
+                TxtMedida.Text = "";
+                TxtIDdueño.Text = "";
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -54,12 +68,20 @@ namespace LaVeterinaria1
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            TxtNMascota.Text = "";
+            TxtTipoAnimal.Text = "";
+            TxtRaza.Text = "";
+            TxtPeso.Text = "";
+            TxtMedida.Text = "";
+            TxtIDdueño.Text = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            if (Form1.mipanel.Controls.Count > 0)
+            {
+                Form1.mipanel.Controls.RemoveAt(0);
+            }
         }
 
         private void TxtDireccion_TextChanged(object sender, EventArgs e)

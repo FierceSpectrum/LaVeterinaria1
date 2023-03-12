@@ -64,7 +64,6 @@ namespace LaVeterinaria1
         {
             CerrarVentanas();
             Funciones.Abrirfh(new InCliente(), this.PContenedor);
-            //Var.Text = "hola xd";
         }
 
         private void BtnVentas_Click(object sender, EventArgs e)
@@ -185,13 +184,11 @@ namespace LaVeterinaria1
         private void BtnEdenfermedad_Click(object sender, EventArgs e)
         {
             CerrarVentanas();
-            Funciones.Abrirfh(new CrudEnfermedad(), this.PContenedor);
         }
 
         private void BtnEmedicamentos_Click(object sender, EventArgs e)
         {
             CerrarVentanas();
-            Funciones.Abrirfh(new CrudMedicamentos(), this.PContenedor);
         }
     }
 }

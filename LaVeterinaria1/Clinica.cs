@@ -13,57 +13,65 @@ namespace LaVeterinaria1
 
     public class Enfermedad
     {
-        private int IdMascota;
+        private int Key, IdMascota;
         private string NEfermedad;
 
         public Enfermedad()
         {
+            this.Key = 0;
             this.IdMascota = 0;
             this.NEfermedad = "";
         }
-        public Enfermedad(int IdMascota, string NEfermedad)
+        public Enfermedad(int Key, int IdMascota, string NEfermedad)
         {
+            this.Key = Key;
             this.IdMascota = IdMascota;
             this.NEfermedad = NEfermedad;
         }
-        public static void Guardar_Enfermedad(Enfermedad Enfermedad)
+        public static bool Guardar_Enfermedad(Enfermedad Enfermedad)
         {
-            StreamWriter writer;
-            bool var = Verificar_Archivo();
-            if (var == true)
+            Enfermedad.setKey(Return_Key());
+            if (Verificar_IdCliente(Enfermedad.getIdMascota()) != true)
             {
-                writer = File.AppendText("Enfermedads.txt");
+                StreamWriter writer;
+                string RutaArchuivo = "Enfermedades.txt";
+                if (File.Exists(RutaArchuivo))
+                {
+                    writer = File.AppendText(RutaArchuivo);
+                }
+                else
+                {
+                    List<Enfermedad> Usuari;
+                    writer = new StreamWriter(RutaArchuivo);
+                }
+                string resultado = Enfermedad.Return_Info();
+                writer.WriteLine(resultado);
+                writer.Close();
+                return true;
             }
-            else
-            {
-                writer = new StreamWriter("Enfermedads.txt");
-            }
-            string enfermedad = Enfermedad.Return_Info();
-            writer.WriteLine(enfermedad);
-            writer.Close();
+            else { return false; }
         }
         public string Return_Info()
         {
-            string Resultado = IdMascota + ";" + NEfermedad;
+            string Resultado = Key + ";" + IdMascota + ";" + NEfermedad;
             return Resultado;
         }
         public static List<Enfermedad> Cargar_Enfermedad()
         {
-
-            StreamReader reader = new StreamReader("Enfermedads.txt");
+            StreamReader reader = new StreamReader("Enfermedades.txt");
             List <Enfermedad> Enfermedad = new List<Enfermedad>();
             Enfermedad Disease;
             string line;
             while ((line = reader.ReadLine()) != null)
             {
                 string[] valores = line.Split(';');
-                Disease = new Enfermedad(Convert.ToInt16(valores[0]), valores[1]);
+                Disease = new Enfermedad(Convert.ToInt16(valores[0]), Convert.ToInt16(valores[1]), valores[2]);
                 Enfermedad.Add(Disease);
             }
             reader.Close();
             return Enfermedad;
         }
-        public bool Verificar_IdCliente(int IdCliente)
+        public static bool Verificar_IdCliente(int IdCliente)
         {
             List<Enfermedad> Enfermedad = Cargar_Enfermedad();
             foreach (Enfermedad Disease in Enfermedad)
@@ -76,18 +84,36 @@ namespace LaVeterinaria1
             }
             return false;
         }
-        public static bool Verificar_Archivo()
+        public static int Return_Key()
         {
-            List<Enfermedad> Enfermedad;
-            try
+            if (Existencia_Archivo())
             {
-                Enfermedad = Cargar_Enfermedad();
-                return true;
+                StreamReader reader = new StreamReader("Enfermedades.txt");
+                string line;
+                if ((line = reader.ReadLine()) != null)
+                {
+                    List<Enfermedad> Enfermedads = Cargar_Enfermedad();
+                    Enfermedad Enfermedad = Enfermedads[Enfermedads.Count - 1];
+                    int key = Enfermedad.getKey() + 1;
+                    reader.Close();
+                    return key;
+                }
+                else { reader.Close(); return 1; }
+                return 1;
             }
-            catch
-            {
-                return false;
-            }
+            else { return 1; }
+        }
+        public static bool Existencia_Archivo()
+        {
+            return File.Exists("Enfermedades.txt");
+        }
+        public int getKey()
+        {
+            return this.Key;
+        }
+        public int setKey(int Key)
+        {
+            return this.Key = Key;
         }
         public int getIdMascota()
         {
@@ -100,28 +126,46 @@ namespace LaVeterinaria1
     }
     public class Medicamento
     {
-        private int IdEfermedad;
+        private int Key, IdEfermedad;
         private string NMedicamento;
         public Medicamento()
         {
+            this.Key = 0;
             this.IdEfermedad = 0;
             this.NMedicamento = "";
         }
-        public Medicamento(int IdEfermedad, string NMedicamento)
+        public Medicamento(int Key, int IdEfermedad, string NMedicamento)
         {
+            this.Key = Key;
             this.IdEfermedad = IdEfermedad;
             this.NMedicamento = NMedicamento;
         }
-        public static void Guardar_Medicamento(Medicamento Medicamento)
+        public static bool Guardar_Medicamento(Medicamento Medicamento)
         {
-            StreamWriter writer = new StreamWriter("Medicamentos.txt");
-                string enfermedad = Medicamento.Return_Info();
-                writer.WriteLine(enfermedad);
-            writer.Close();
+            Medicamento.setKey(Return_Key());
+            if (Verificar_IdCliente(Medicamento.getIdEfermedad()) != true)
+            {
+                StreamWriter writer;
+                string RutaArchuivo = "Medicamentos.txt";
+                if (File.Exists(RutaArchuivo))
+                {
+                    writer = File.AppendText(RutaArchuivo);
+                }
+                else
+                {
+                    List<Medicamento> Usuari;
+                    writer = new StreamWriter(RutaArchuivo);
+                }
+                string resultado = Medicamento.Return_Info();
+                writer.WriteLine(resultado);
+                writer.Close();
+                return true;
+            }
+            else { return false; }
         }
         public string Return_Info()
         {
-            string Resultado = IdEfermedad + ";" + NMedicamento;
+            string Resultado = Key + ";" + IdEfermedad + ";" + NMedicamento;
             return Resultado;
         }
         public static List<Medicamento> Cargar_Medicamento()
@@ -133,13 +177,13 @@ namespace LaVeterinaria1
             while ((line = reader.ReadLine()) != null)
             {
                 string[] valores = line.Split(';');
-                Medicine = new Medicamento(Convert.ToInt16(valores[0]), valores[1]);
+                Medicine = new Medicamento(Convert.ToInt16(valores[0]), Convert.ToInt16(valores[1]), valores[2]);
                 Medicamento.Add(Medicine);
             }
             reader.Close();
             return Medicamento;
         }
-        public bool Verificar_IdCliente(int IdCliente)
+        public static bool Verificar_IdCliente(int IdCliente)
         {
             List<Medicamento> Medicamento = Cargar_Medicamento();
             foreach (Medicamento Medicine in Medicamento)
@@ -151,6 +195,37 @@ namespace LaVeterinaria1
                 }
             }
             return false;
+        }
+        public static int Return_Key()
+        {
+            if (Existencia_Archivo())
+            {
+                StreamReader reader = new StreamReader("Medicamentos.txt");
+                string line;
+                if ((line = reader.ReadLine()) != null)
+                {
+                    List<Medicamento> Medicamentos = Cargar_Medicamento();
+                    Medicamento Medicamento = Medicamentos[Medicamentos.Count - 1];
+                    int key = Medicamento.getKey() + 1;
+                    reader.Close();
+                    return key;
+                }
+                else { reader.Close(); return 1; }
+                return 1;
+            }
+            else { return 1; }
+        }
+        public static bool Existencia_Archivo()
+        {
+            return File.Exists("Medicamentos.txt");
+        }
+        public int getKey()
+        {
+            return this.Key;
+        }
+        public int setKey(int Key)
+        {
+            return this.Key = Key;
         }
         public int getIdEfermedad()
         {

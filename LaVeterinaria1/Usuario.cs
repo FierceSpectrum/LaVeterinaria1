@@ -133,10 +133,11 @@ namespace LaVeterinaria1
     public class Mascota
     {
         private string Nombre, TipoAnimal, Raza;
-        private int Peso, Medida, IdCliente;
+        private int Key, Peso, Medida, IdCliente;
 
         public Mascota()
         {
+            this.Key = 0;
             this.Nombre = "";
             this.TipoAnimal = "";
             this.Raza = "";
@@ -144,8 +145,9 @@ namespace LaVeterinaria1
             this.Medida = 0;
             this.IdCliente = 0;
         }
-        public Mascota(string Nombre, string TipoAnimal, string Raza, int Peso, int Medida, int IdCliente)
+        public Mascota(int Key, string Nombre, string TipoAnimal, string Raza, int Peso, int Medida, int IdCliente)
         {
+            this.Key = Key;
             this.Nombre = Nombre;
             this.TipoAnimal = TipoAnimal;
             this.Raza = Raza;
@@ -153,39 +155,55 @@ namespace LaVeterinaria1
             this.Medida = Medida;
             this.IdCliente = IdCliente;
         }
-        public static void Guardar_Mascota(Mascota Mascota)
+        public static bool Guardar_Mascota(Mascota Mascota)
         {
-            StreamWriter writer = new StreamWriter("Mascotas.txt");
-            string resultado = Mascota.Return_Info();
-            writer.WriteLine(resultado);
-            writer.Close();
+            Mascota.setKey(Return_Key());
+            if (Verificar_IdCliente(Mascota.getIdCliente()) != true)
+            {
+                StreamWriter writer;
+                string RutaArchuivo = "Mascotas.txt";
+                if (File.Exists(RutaArchuivo))
+                {
+                    writer = File.AppendText(RutaArchuivo);
+                }
+                else
+                {
+                    List<Cliente> Usuari;
+                    writer = new StreamWriter(RutaArchuivo);
+                }
+                string resultado = Mascota.Return_Info();
+                writer.WriteLine(resultado);
+                writer.Close();
+                return true;
+            }
+            else { return false; }
         }
         public string Return_Info()
         {
-            string Resultado = Nombre + ";" + TipoAnimal + ";" + Raza + ";" + Peso + ";" + Medida + ";" + IdCliente;
+            string Resultado = Key + ";" + Nombre + ";" + TipoAnimal + ";" + Raza + ";" + Peso + ";" + Medida + ";" + IdCliente;
             return Resultado;
         }
         public static List<Mascota> Cargar_Mascota()
         {
-            StreamReader reader = new StreamReader("datos.txt");
+            StreamReader reader = new StreamReader("Mascotas.txt");
             List<Mascota> Mascota = new List<Mascota>();
             Mascota Pet;
             string line;
             while ((line = reader.ReadLine()) != null)
             {
                 string[] valores = line.Split(';');
-                Pet = new Mascota(valores[0], valores[1], valores[2], Convert.ToInt16(valores[3]), Convert.ToInt16(valores[4]), Convert.ToInt16(valores[5]));
+                Pet = new Mascota(Convert.ToInt16(valores[0]), valores[1], valores[2], valores[3], Convert.ToInt16(valores[4]), Convert.ToInt16(valores[5]), Convert.ToInt16(valores[6]));
                 Mascota.Add(Pet);
             }
             reader.Close();
             return Mascota;
         }
-        public bool Verificar_IdCliente(int IdCliente)
+        public static bool Verificar_IdCliente(int IdCliente)
         {
             List<Mascota> Mascota = Cargar_Mascota();
             foreach (Mascota Pet in Mascota)
             {
-                int ID = Pet.geIdCliente();
+                int ID = Pet.getIdCliente();
                 if (IdCliente == ID)
                 {
                     return true;
@@ -193,7 +211,38 @@ namespace LaVeterinaria1
             }
             return false;
         }
-        public int geIdCliente()
+        public static int Return_Key()
+        {
+            if (Existencia_Archivo())
+            {
+                StreamReader reader = new StreamReader("Mascotas.txt");
+                string line;
+                if ((line = reader.ReadLine()) != null)
+                {
+                    List<Mascota> Mascotas = Cargar_Mascota();
+                    Mascota Mascota = Mascotas[Mascotas.Count - 1];
+                    int key = Mascota.getKey() + 1;
+                    reader.Close();
+                    return key;
+                }
+                else { reader.Close(); return 1; }
+                return 1;
+            }
+            else { return 1; }
+        }
+        public static bool Existencia_Archivo()
+        {
+            return File.Exists("Mascotas.txt");
+        }
+        public int getKey()
+        {
+            return this.Key;
+        }
+        public int setKey(int Key)
+        {
+            return this.Key = Key;
+        }
+        public int getIdCliente()
         {
             return this.IdCliente;
         }
