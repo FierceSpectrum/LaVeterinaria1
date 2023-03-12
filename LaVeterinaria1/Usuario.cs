@@ -13,8 +13,12 @@ namespace LaVeterinaria1
 
     public class Cliente
     {
-        private int Key, Identificacion, Cell;
-        private string Nombre, Appellidos, Direccion;
+        public int Key { get; set; }
+        public int Identificacion { get; set; }
+        public int Cell { get; set; }
+        public string Nombre { get; set; }
+        public string Appellidos { get; set; }
+        public string Direccion { get; set; }
 
         public Cliente()
         {
@@ -36,8 +40,8 @@ namespace LaVeterinaria1
         }
         public static bool Guardar_Cliente(Cliente Cliente)
         {
-            Cliente.setKey(Return_Key());
-            if (Verificar_IdCliente(Cliente.getIdentificacion()) != true)
+            Cliente.Key = Return_Key();
+            if (Verificar_IdCliente(Cliente.Identificacion) != true)
             { 
                 StreamWriter writer;
                 string RutaArchuivo = "Clientes.txt";
@@ -81,7 +85,7 @@ namespace LaVeterinaria1
             List<Cliente> Cliente = Cargar_Cliente();
             foreach (Cliente Client in Cliente)
             {
-                int ID = Client.getIdentificacion();
+                int ID = Client.Identificacion;
                 if (IdCliente == ID)
                 {
                     return true;
@@ -99,7 +103,7 @@ namespace LaVeterinaria1
                 {
                     List<Cliente> Clientes = Cargar_Cliente();
                     Cliente Cliente = Clientes[Clientes.Count - 1];
-                    int key = Cliente.getKey() + 1;
+                    int key = Cliente.Key + 1;
                     reader.Close();
                     return key;
                 }
@@ -111,28 +115,17 @@ namespace LaVeterinaria1
         {
             return File.Exists("Clientes.txt");
         }
-        public int getKey()
-        {
-            return this.Key;
-        }
-        public int setKey(int Key)
-        {
-            return this.Key = Key;
-        }
-        public int getIdentificacion()
-        {
-            return this.Identificacion;
-        }
-        public int setIdentificacion(int Identificacion)
-        {
-            return this.Identificacion = Identificacion;
-        }
     }
 
     public class Mascota
     {
-        private string Nombre, TipoAnimal, Raza;
-        private int Key, Peso, Medida, IdCliente;
+        public string Nombre { get; set; }
+        public string TipoAnimal { get; set; }
+        public string Raza { get; set; }
+        public int Key { get; set; }
+        public int Peso { get; set; }
+        public int Medida { get; set; }
+        public int IdCliente { get; set; }
 
         public Mascota()
         {
@@ -156,8 +149,8 @@ namespace LaVeterinaria1
         }
         public static bool Guardar_Mascota(Mascota Mascota)
         {
-            Mascota.setKey(Return_Key());
-            if (Verificar_IdCliente(Mascota.getIdCliente()) != true)
+            Mascota.Key = (Return_Key());
+            if (Verificar_IdCliente(Mascota.IdCliente) != true)
             {
                 StreamWriter writer;
                 string RutaArchuivo = "Mascotas.txt";
@@ -202,7 +195,7 @@ namespace LaVeterinaria1
             List<Mascota> Mascota = Cargar_Mascota();
             foreach (Mascota Pet in Mascota)
             {
-                int ID = Pet.getIdCliente();
+                int ID = Pet.IdCliente;
                 if (IdCliente == ID)
                 {
                     return true;
@@ -220,7 +213,7 @@ namespace LaVeterinaria1
                 {
                     List<Mascota> Mascotas = Cargar_Mascota();
                     Mascota Mascota = Mascotas[Mascotas.Count - 1];
-                    int key = Mascota.getKey() + 1;
+                    int key = Mascota.Key + 1;
                     reader.Close();
                     return key;
                 }
@@ -231,63 +224,6 @@ namespace LaVeterinaria1
         public static bool Existencia_Archivo()
         {
             return File.Exists("Mascotas.txt");
-        }
-        public int getKey()
-        {
-            return this.Key;
-        }
-        public int setKey(int Key)
-        {
-            return this.Key = Key;
-        }
-        public string getNombre()
-        {
-            return this.Nombre;
-        }
-        public string setNombre(string Nombre)
-        {
-            return this.Nombre = Nombre;
-        }
-        public string getTipoAnimal()
-        {
-            return this.TipoAnimal;
-        }
-        public string setTipoAnimal(string TipoAnimal)
-        {
-            return this.TipoAnimal = TipoAnimal;
-        }
-        public string getRaza()
-        {
-            return this.Raza;
-        }
-        public string setRaza(string Raza)
-        {
-            return this.Raza = Raza;
-        }
-        public int getPeso()
-        {
-            return this.Peso;
-        }
-        public int setPeso(int Peso)
-        {
-            return this.Peso = Peso;
-        }
-        public int getMedida()
-        {
-            return this.Medida;
-        }
-        public int setMedida(int Medida)
-        {
-            return this.Medida = Medida;
-        }
-
-        public int getIdCliente()
-        {
-            return this.IdCliente;
-        }
-        public int setIdCliente(int IdCliente)
-        {
-            return this.IdCliente = IdCliente;
         }
     }
 }

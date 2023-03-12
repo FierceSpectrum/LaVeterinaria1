@@ -13,8 +13,10 @@ namespace LaVeterinaria1
 
     public class Enfermedad
     {
-        private int Key, IdMascota, KeyMascota;
-        private string NEfermedad;
+        public int Key { get; set; }
+        public int IdMascota { get; set; }
+        public int KeyMascota { get; set; }
+        public string NEfermedad { get; set; }
 
         public Enfermedad()
         {
@@ -33,8 +35,8 @@ namespace LaVeterinaria1
         }
         public static bool Guardar_Enfermedad(Enfermedad Enfermedad)
         {
-            Enfermedad.setKey(Return_Key());
-            if (Verificar_IdCliente(Enfermedad.getIdMascota()) != true)
+            Enfermedad.Key = Return_Key();
+            if (Verificar_IdCliente(Enfermedad.IdMascota) != true)
             {
                 StreamWriter writer;
                 string RutaArchuivo = "Enfermedades.txt";
@@ -79,7 +81,7 @@ namespace LaVeterinaria1
             List<Mascota> Mascotas = Mascota.Cargar_Mascota();
             foreach (Mascota Mascota in Mascotas)
             {
-                int ID = Mascota.getIdCliente();
+                int ID = Mascota.IdCliente;
                 if (IdCliente == ID)
                 {
                     return true;
@@ -97,7 +99,7 @@ namespace LaVeterinaria1
                 {
                     List<Enfermedad> Enfermedads = Cargar_Enfermedad();
                     Enfermedad Enfermedad = Enfermedads[Enfermedads.Count - 1];
-                    int key = Enfermedad.getKey() + 1;
+                    int key = Enfermedad.Key + 1;
                     reader.Close();
                     return key;
                 }
@@ -109,35 +111,13 @@ namespace LaVeterinaria1
         {
             return File.Exists("Enfermedades.txt");
         }
-        public int getKey()
-        {
-            return this.Key;
-        }
-        public int setKey(int Key)
-        {
-            return this.Key = Key;
-        }
-        public int getIdMascota()
-        {
-            return this.IdMascota;
-        }
-        public int setIdMascota(int IdMascota)
-        {
-            return this.IdMascota = IdMascota;
-        }
-        public int getKeyMascota()
-        {
-            return this.KeyMascota;
-        }
-        public int setKeyMascota(int KeyMascota)
-        {
-            return this.KeyMascota = KeyMascota;
-        }
     }
     public class Medicamento
     {
-        private int Key, IdEfermedad, KeyEnfermedad;
-        private string NMedicamento;
+        public int Key { get; set; }
+        public int IdEfermedad { get; set; }
+        public int KeyEnfermedad { get; set; }
+        public string NMedicamento { get; set; }
         public Medicamento()
         {
             this.Key = 0;
@@ -154,8 +134,8 @@ namespace LaVeterinaria1
         }
         public static bool Guardar_Medicamento(Medicamento Medicamento)
         {
-            Medicamento.setKey(Return_Key());
-            if (Verificar_IdCliente(Medicamento.getIdEfermedad()) != true)
+            Medicamento.Key = Return_Key();
+            if (Verificar_IdCliente(Medicamento.IdEfermedad) != true)
             {
                 StreamWriter writer;
                 string RutaArchuivo = "Medicamentos.txt";
@@ -200,7 +180,7 @@ namespace LaVeterinaria1
             List<Medicamento> Medicamento = Cargar_Medicamento();
             foreach (Medicamento Medicine in Medicamento)
             {
-                int ID = Medicine.getIdEfermedad();
+                int ID = Medicine.IdEfermedad;
                 if (IdCliente == ID)
                 {
                     return true;
@@ -218,7 +198,7 @@ namespace LaVeterinaria1
                 {
                     List<Medicamento> Medicamentos = Cargar_Medicamento();
                     Medicamento Medicamento = Medicamentos[Medicamentos.Count - 1];
-                    int key = Medicamento.getKey() + 1;
+                    int key = Medicamento.Key + 1;
                     reader.Close();
                     return key;
                 }
@@ -230,22 +210,5 @@ namespace LaVeterinaria1
         {
             return File.Exists("Medicamentos.txt");
         }
-        public int getKey()
-        {
-            return this.Key;
-        }
-        public int setKey(int Key)
-        {
-            return this.Key = Key;
-        }
-        public int getIdEfermedad()
-        {
-            return this.IdEfermedad;
-        }
-        public int setIdEfermedad(int IdEfermedad)
-        {
-            return this.IdEfermedad = IdEfermedad;
-        }
-
     }
 }
