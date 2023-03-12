@@ -33,13 +33,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.PEnfermedad = new System.Windows.Forms.Panel();
-            this.TxtIdDueño = new System.Windows.Forms.TextBox();
             this.TxtEnfermedad = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btBuscar = new System.Windows.Forms.Button();
             this.ListaMascotas = new System.Windows.Forms.ComboBox();
+            this.Cmb_mascota = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -60,9 +60,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.Size = new System.Drawing.Size(74, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Identificacion:";
+            this.label2.Text = "Mascota:";
             // 
             // label3
             // 
@@ -83,18 +83,11 @@
             this.PEnfermedad.Size = new System.Drawing.Size(238, 355);
             this.PEnfermedad.TabIndex = 3;
             // 
-            // TxtIdDueño
-            // 
-            this.TxtIdDueño.Location = new System.Drawing.Point(190, 96);
-            this.TxtIdDueño.Name = "TxtIdDueño";
-            this.TxtIdDueño.Size = new System.Drawing.Size(121, 20);
-            this.TxtIdDueño.TabIndex = 4;
-            // 
             // TxtEnfermedad
             // 
-            this.TxtEnfermedad.Location = new System.Drawing.Point(190, 144);
+            this.TxtEnfermedad.Location = new System.Drawing.Point(163, 144);
             this.TxtEnfermedad.Name = "TxtEnfermedad";
-            this.TxtEnfermedad.Size = new System.Drawing.Size(121, 20);
+            this.TxtEnfermedad.Size = new System.Drawing.Size(148, 20);
             this.TxtEnfermedad.TabIndex = 5;
             // 
             // button3
@@ -157,19 +150,34 @@
             this.ListaMascotas.TabIndex = 47;
             this.ListaMascotas.Text = "Mascotas";
             // 
+            // Cmb_mascota
+            // 
+            this.Cmb_mascota.FormattingEnabled = true;
+            this.Cmb_mascota.Items.AddRange(new object[] {
+            "Hola\t",
+            "que",
+            "hace",
+            "todo",
+            "bien?"});
+            this.Cmb_mascota.Location = new System.Drawing.Point(163, 95);
+            this.Cmb_mascota.Margin = new System.Windows.Forms.Padding(4);
+            this.Cmb_mascota.Name = "Cmb_mascota";
+            this.Cmb_mascota.Size = new System.Drawing.Size(149, 21);
+            this.Cmb_mascota.TabIndex = 6;
+            // 
             // InEnfermedad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(561, 475);
+            this.Controls.Add(this.Cmb_mascota);
             this.Controls.Add(this.ListaMascotas);
             this.Controls.Add(this.btBuscar);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TxtEnfermedad);
-            this.Controls.Add(this.TxtIdDueño);
             this.Controls.Add(this.PEnfermedad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -188,12 +196,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel PEnfermedad;
-        private System.Windows.Forms.TextBox TxtIdDueño;
         private System.Windows.Forms.TextBox TxtEnfermedad;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btBuscar;
         private System.Windows.Forms.ComboBox ListaMascotas;
+        private System.Windows.Forms.ComboBox Cmb_mascota;
     }
 }

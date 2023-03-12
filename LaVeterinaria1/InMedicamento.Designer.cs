@@ -33,11 +33,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.TxtMedicamento = new System.Windows.Forms.TextBox();
-            this.TxtIdMascota = new System.Windows.Forms.TextBox();
             this.PEnfermedad = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Cmb_Mascota = new System.Windows.Forms.ComboBox();
+            this.Cmb_enfermedad = new System.Windows.Forms.ComboBox();
+            this.Enfermedad = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button3
@@ -75,19 +77,11 @@
             // 
             // TxtMedicamento
             // 
-            this.TxtMedicamento.Location = new System.Drawing.Point(190, 142);
+            this.TxtMedicamento.Location = new System.Drawing.Point(177, 142);
             this.TxtMedicamento.Name = "TxtMedicamento";
-            this.TxtMedicamento.Size = new System.Drawing.Size(121, 20);
+            this.TxtMedicamento.Size = new System.Drawing.Size(134, 20);
             this.TxtMedicamento.TabIndex = 51;
             this.TxtMedicamento.TextChanged += new System.EventHandler(this.TxtEnfermedad_TextChanged);
-            // 
-            // TxtIdMascota
-            // 
-            this.TxtIdMascota.Location = new System.Drawing.Point(190, 94);
-            this.TxtIdMascota.Name = "TxtIdMascota";
-            this.TxtIdMascota.Size = new System.Drawing.Size(121, 20);
-            this.TxtIdMascota.TabIndex = 50;
-            this.TxtIdMascota.TextChanged += new System.EventHandler(this.TxtIdDueño_TextChanged);
             // 
             // PEnfermedad
             // 
@@ -117,9 +111,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.Size = new System.Drawing.Size(70, 20);
             this.label2.TabIndex = 47;
-            this.label2.Text = "Identificacion:";
+            this.label2.Text = "Mascota";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
@@ -134,6 +128,47 @@
             this.label1.Text = "Registrar Medicamento\r\n";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // Cmb_Mascota
+            // 
+            this.Cmb_Mascota.FormattingEnabled = true;
+            this.Cmb_Mascota.Items.AddRange(new object[] {
+            "Hola\t",
+            "que",
+            "hace",
+            "todo",
+            "bien?"});
+            this.Cmb_Mascota.Location = new System.Drawing.Point(177, 93);
+            this.Cmb_Mascota.Margin = new System.Windows.Forms.Padding(4);
+            this.Cmb_Mascota.Name = "Cmb_Mascota";
+            this.Cmb_Mascota.Size = new System.Drawing.Size(133, 21);
+            this.Cmb_Mascota.TabIndex = 6;
+            // 
+            // Cmb_enfermedad
+            // 
+            this.Cmb_enfermedad.FormattingEnabled = true;
+            this.Cmb_enfermedad.Items.AddRange(new object[] {
+            "Hola\t",
+            "que",
+            "hace",
+            "todo",
+            "bien?"});
+            this.Cmb_enfermedad.Location = new System.Drawing.Point(177, 189);
+            this.Cmb_enfermedad.Margin = new System.Windows.Forms.Padding(4);
+            this.Cmb_enfermedad.Name = "Cmb_enfermedad";
+            this.Cmb_enfermedad.Size = new System.Drawing.Size(133, 21);
+            this.Cmb_enfermedad.TabIndex = 55;
+            // 
+            // Enfermedad
+            // 
+            this.Enfermedad.AutoSize = true;
+            this.Enfermedad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Enfermedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Enfermedad.Location = new System.Drawing.Point(12, 190);
+            this.Enfermedad.Name = "Enfermedad";
+            this.Enfermedad.Size = new System.Drawing.Size(97, 20);
+            this.Enfermedad.TabIndex = 56;
+            this.Enfermedad.Text = "Enfermedad";
+            // 
             // InMedicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,11 +176,13 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(557, 487);
+            this.Controls.Add(this.Cmb_enfermedad);
+            this.Controls.Add(this.Enfermedad);
+            this.Controls.Add(this.Cmb_Mascota);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TxtMedicamento);
-            this.Controls.Add(this.TxtIdMascota);
             this.Controls.Add(this.PEnfermedad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -164,10 +201,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox TxtMedicamento;
-        private System.Windows.Forms.TextBox TxtIdMascota;
         private System.Windows.Forms.Panel PEnfermedad;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox Cmb_Mascota;
+        private System.Windows.Forms.ComboBox Cmb_enfermedad;
+        private System.Windows.Forms.Label Enfermedad;
     }
 }

@@ -45,11 +45,9 @@
             this.PEnfermedad = new System.Windows.Forms.Panel();
             this.Txtenfermedad = new System.Windows.Forms.TextBox();
             this.TxtNombreAnimal = new System.Windows.Forms.TextBox();
-            this.TxtIdentificacion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.PBorenfe.SuspendLayout();
             this.Pactuenfe.SuspendLayout();
             this.PverEnfe.SuspendLayout();
@@ -252,12 +250,10 @@
             this.PEnfermedad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PEnfermedad.Controls.Add(this.Txtenfermedad);
             this.PEnfermedad.Controls.Add(this.TxtNombreAnimal);
-            this.PEnfermedad.Controls.Add(this.TxtIdentificacion);
             this.PEnfermedad.Controls.Add(this.label7);
             this.PEnfermedad.Controls.Add(this.label8);
             this.PEnfermedad.Controls.Add(this.label9);
-            this.PEnfermedad.Controls.Add(this.label10);
-            this.PEnfermedad.Location = new System.Drawing.Point(31, 281);
+            this.PEnfermedad.Location = new System.Drawing.Point(316, 48);
             this.PEnfermedad.Name = "PEnfermedad";
             this.PEnfermedad.Size = new System.Drawing.Size(313, 172);
             this.PEnfermedad.TabIndex = 28;
@@ -265,24 +261,17 @@
             // 
             // Txtenfermedad
             // 
-            this.Txtenfermedad.Location = new System.Drawing.Point(126, 133);
+            this.Txtenfermedad.Location = new System.Drawing.Point(137, 82);
             this.Txtenfermedad.Name = "Txtenfermedad";
             this.Txtenfermedad.Size = new System.Drawing.Size(141, 20);
             this.Txtenfermedad.TabIndex = 8;
             // 
             // TxtNombreAnimal
             // 
-            this.TxtNombreAnimal.Location = new System.Drawing.Point(126, 102);
+            this.TxtNombreAnimal.Location = new System.Drawing.Point(137, 51);
             this.TxtNombreAnimal.Name = "TxtNombreAnimal";
             this.TxtNombreAnimal.Size = new System.Drawing.Size(141, 20);
             this.TxtNombreAnimal.TabIndex = 7;
-            // 
-            // TxtIdentificacion
-            // 
-            this.TxtIdentificacion.Location = new System.Drawing.Point(126, 76);
-            this.TxtIdentificacion.Name = "TxtIdentificacion";
-            this.TxtIdentificacion.Size = new System.Drawing.Size(141, 20);
-            this.TxtIdentificacion.TabIndex = 6;
             // 
             // label7
             // 
@@ -299,7 +288,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(11, 138);
+            this.label8.Location = new System.Drawing.Point(22, 87);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 16);
             this.label8.TabIndex = 2;
@@ -309,21 +298,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(11, 107);
+            this.label9.Location = new System.Drawing.Point(22, 56);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 16);
             this.label9.TabIndex = 1;
             this.label9.Text = "Nombre Animal:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(11, 81);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 16);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Identificacion:";
             // 
             // CrudEnfermedad
             // 
@@ -372,10 +351,8 @@
         private System.Windows.Forms.Panel PEnfermedad;
         private System.Windows.Forms.TextBox Txtenfermedad;
         private System.Windows.Forms.TextBox TxtNombreAnimal;
-        private System.Windows.Forms.TextBox TxtIdentificacion;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
     }
 }

@@ -36,24 +36,24 @@
             this.BtnMedicamento = new System.Windows.Forms.Button();
             this.BtnleerMedi = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
-            this.PMedicamento = new System.Windows.Forms.Panel();
-            this.TxtMedicamento = new System.Windows.Forms.TextBox();
-            this.TxtNombreAnimal = new System.Windows.Forms.TextBox();
-            this.TxtIdentificacion = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.PBormedi = new System.Windows.Forms.Panel();
             this.Cmb_Borrarmedi = new System.Windows.Forms.ComboBox();
             this.PAmedicamento = new System.Windows.Forms.Panel();
             this.Cmb_Amedi = new System.Windows.Forms.ComboBox();
             this.PverMedi = new System.Windows.Forms.Panel();
             this.Cmb_Leermedi = new System.Windows.Forms.ComboBox();
-            this.PMedicamento.SuspendLayout();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TxtNombreAnimal = new System.Windows.Forms.TextBox();
+            this.TxtMedicamento = new System.Windows.Forms.TextBox();
+            this.PMedicamento = new System.Windows.Forms.Panel();
+            this.TxtEnfermedad = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.PBormedi.SuspendLayout();
             this.PAmedicamento.SuspendLayout();
             this.PverMedi.SuspendLayout();
+            this.PMedicamento.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnSalir
@@ -172,84 +172,6 @@
             this.BtnActualizar.UseVisualStyleBackColor = false;
             this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
-            // PMedicamento
-            // 
-            this.PMedicamento.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PMedicamento.Controls.Add(this.TxtMedicamento);
-            this.PMedicamento.Controls.Add(this.TxtNombreAnimal);
-            this.PMedicamento.Controls.Add(this.TxtIdentificacion);
-            this.PMedicamento.Controls.Add(this.label7);
-            this.PMedicamento.Controls.Add(this.label8);
-            this.PMedicamento.Controls.Add(this.label9);
-            this.PMedicamento.Controls.Add(this.label10);
-            this.PMedicamento.Location = new System.Drawing.Point(291, 26);
-            this.PMedicamento.Name = "PMedicamento";
-            this.PMedicamento.Size = new System.Drawing.Size(313, 172);
-            this.PMedicamento.TabIndex = 29;
-            this.PMedicamento.Visible = false;
-            // 
-            // TxtMedicamento
-            // 
-            this.TxtMedicamento.Location = new System.Drawing.Point(126, 133);
-            this.TxtMedicamento.Name = "TxtMedicamento";
-            this.TxtMedicamento.Size = new System.Drawing.Size(141, 20);
-            this.TxtMedicamento.TabIndex = 8;
-            // 
-            // TxtNombreAnimal
-            // 
-            this.TxtNombreAnimal.Location = new System.Drawing.Point(126, 102);
-            this.TxtNombreAnimal.Name = "TxtNombreAnimal";
-            this.TxtNombreAnimal.Size = new System.Drawing.Size(141, 20);
-            this.TxtNombreAnimal.TabIndex = 7;
-            // 
-            // TxtIdentificacion
-            // 
-            this.TxtIdentificacion.Location = new System.Drawing.Point(126, 76);
-            this.TxtIdentificacion.Name = "TxtIdentificacion";
-            this.TxtIdentificacion.Size = new System.Drawing.Size(141, 20);
-            this.TxtIdentificacion.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(62, 26);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(219, 16);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Ingrese los Datos del Medicamento";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(11, 138);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 16);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Medicamento:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(11, 107);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 16);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Nombre Animal:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(11, 81);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 16);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Identificacion:";
-            // 
             // PBormedi
             // 
             this.PBormedi.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -325,6 +247,84 @@
             this.Cmb_Leermedi.Size = new System.Drawing.Size(180, 21);
             this.Cmb_Leermedi.TabIndex = 6;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(25, 62);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 16);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Nombre Animal:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(25, 93);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 16);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Medicamento:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(62, 26);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(219, 16);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Ingrese los Datos del Medicamento";
+            // 
+            // TxtNombreAnimal
+            // 
+            this.TxtNombreAnimal.Location = new System.Drawing.Point(140, 57);
+            this.TxtNombreAnimal.Name = "TxtNombreAnimal";
+            this.TxtNombreAnimal.Size = new System.Drawing.Size(141, 20);
+            this.TxtNombreAnimal.TabIndex = 7;
+            // 
+            // TxtMedicamento
+            // 
+            this.TxtMedicamento.Location = new System.Drawing.Point(140, 88);
+            this.TxtMedicamento.Name = "TxtMedicamento";
+            this.TxtMedicamento.Size = new System.Drawing.Size(141, 20);
+            this.TxtMedicamento.TabIndex = 8;
+            // 
+            // PMedicamento
+            // 
+            this.PMedicamento.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PMedicamento.Controls.Add(this.TxtEnfermedad);
+            this.PMedicamento.Controls.Add(this.label1);
+            this.PMedicamento.Controls.Add(this.TxtMedicamento);
+            this.PMedicamento.Controls.Add(this.TxtNombreAnimal);
+            this.PMedicamento.Controls.Add(this.label7);
+            this.PMedicamento.Controls.Add(this.label8);
+            this.PMedicamento.Controls.Add(this.label9);
+            this.PMedicamento.Location = new System.Drawing.Point(291, 26);
+            this.PMedicamento.Name = "PMedicamento";
+            this.PMedicamento.Size = new System.Drawing.Size(313, 172);
+            this.PMedicamento.TabIndex = 29;
+            this.PMedicamento.Visible = false;
+            // 
+            // TxtEnfermedad
+            // 
+            this.TxtEnfermedad.Location = new System.Drawing.Point(140, 118);
+            this.TxtEnfermedad.Name = "TxtEnfermedad";
+            this.TxtEnfermedad.Size = new System.Drawing.Size(141, 20);
+            this.TxtEnfermedad.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(25, 123);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Enfermedad:";
+            // 
             // CrudMedicamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,11 +345,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CrudMedicamentos";
             this.Text = "CrudMedicamentos";
-            this.PMedicamento.ResumeLayout(false);
-            this.PMedicamento.PerformLayout();
             this.PBormedi.ResumeLayout(false);
             this.PAmedicamento.ResumeLayout(false);
             this.PverMedi.ResumeLayout(false);
+            this.PMedicamento.ResumeLayout(false);
+            this.PMedicamento.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -363,19 +363,19 @@
         private System.Windows.Forms.Button BtnMedicamento;
         private System.Windows.Forms.Button BtnleerMedi;
         private System.Windows.Forms.Button BtnActualizar;
-        private System.Windows.Forms.Panel PMedicamento;
-        private System.Windows.Forms.TextBox TxtMedicamento;
-        private System.Windows.Forms.TextBox TxtNombreAnimal;
-        private System.Windows.Forms.TextBox TxtIdentificacion;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel PBormedi;
         private System.Windows.Forms.ComboBox Cmb_Borrarmedi;
         private System.Windows.Forms.Panel PAmedicamento;
         private System.Windows.Forms.ComboBox Cmb_Amedi;
         private System.Windows.Forms.Panel PverMedi;
         private System.Windows.Forms.ComboBox Cmb_Leermedi;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox TxtNombreAnimal;
+        private System.Windows.Forms.TextBox TxtMedicamento;
+        private System.Windows.Forms.Panel PMedicamento;
+        private System.Windows.Forms.TextBox TxtEnfermedad;
+        private System.Windows.Forms.Label label1;
     }
 }
