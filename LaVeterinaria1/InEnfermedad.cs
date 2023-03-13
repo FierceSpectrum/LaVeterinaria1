@@ -19,7 +19,8 @@ namespace LaVeterinaria1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Enfermedad Enfermedad = new Enfermedad(0, Convert.ToInt32(TxtIdDueño.Text), TxtEnfermedad.Text);
+            Mascota Mascota = ListaMascotas.SelectedItem as Mascota;
+            Enfermedad Enfermedad = new Enfermedad(0, Convert.ToInt32(TxtDueño.Text), TxtEnfermedad.Text, Mascota.Key);
             if (Enfermedad.Guardar_Enfermedad(Enfermedad) != true)
             {
                 MessageBox.Show("Esta ID no esta registrada", "Efermedad", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -27,14 +28,14 @@ namespace LaVeterinaria1
             else
             {
                 MessageBox.Show("Se a agregado con Exito", "Efermedad", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                TxtIdDueño.Text = "";
+                TxtDueño.Text = "";
                 TxtEnfermedad.Text = "";
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TxtIdDueño.Text = "";
+            TxtDueño.Text = "";
             TxtEnfermedad.Text = "";
         }
 
@@ -51,18 +52,51 @@ namespace LaVeterinaria1
             if (Mascota.Existencia_Archivo())
             {
                 List<Mascota> Mascotas = Mascota.Cargar_Mascota();
+                int count = 1;
                 foreach (Mascota Mascota in Mascotas)
                 {
-                    if (Mascota.getIdCliente() == Convert.ToInt32(TxtIdDueño.Text))
+                    if (Mascota.IdCliente == Convert.ToInt32(TxtDueño.Text))
                     {
-                        ListaMascotas.Items.Add(Mascota.);
-                    }                
+
+                        ListaMascotas.Items.Add(Mascota);
+                        count++;
+                    }
                 }
-                
             }
-            else { }
-            
-            
+            else
+            { MessageBox.Show("No existe la mascota", "Efermedad", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+
+
+        }
+
+        private void Cmb_mascota_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListaMascotas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Mascota Mascota = ListaMascotas.SelectedItem as Mascota;
+            LNombre.Text = Mascota.Nombre;
+            LAnimal.Text = Mascota.TipoAnimal;
+            LRaza.Text = Mascota.Raza;
+            LPeso.Text = "" + Mascota.Peso;
+            LMedida.Text = "" + Mascota.Medida;
+        }
+
+        private void InEnfermedad_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

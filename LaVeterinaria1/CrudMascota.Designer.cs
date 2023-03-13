@@ -36,13 +36,11 @@
             this.BtnCcliente = new System.Windows.Forms.Button();
             this.Btnleercliente = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
-            this.PborrarMascota = new System.Windows.Forms.Panel();
-            this.Cmb_Borrarmascota = new System.Windows.Forms.ComboBox();
-            this.PactualizarMas = new System.Windows.Forms.Panel();
-            this.Cmb_AMascota = new System.Windows.Forms.ComboBox();
             this.PvMascota = new System.Windows.Forms.Panel();
-            this.Cmb_LeerMascota = new System.Windows.Forms.ComboBox();
+            this.ListaMascotas = new System.Windows.Forms.ComboBox();
             this.PMascota = new System.Windows.Forms.Panel();
+            this.TxtMedida = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.TxtPesoan = new System.Windows.Forms.TextBox();
             this.TxtRazaAn = new System.Windows.Forms.TextBox();
             this.TxtTipoAni = new System.Windows.Forms.TextBox();
@@ -54,10 +52,6 @@
             this.LatIpERRO = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TxtMedida = new System.Windows.Forms.TextBox();
-            this.PborrarMascota.SuspendLayout();
-            this.PactualizarMas.SuspendLayout();
             this.PvMascota.SuspendLayout();
             this.PMascota.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +71,7 @@
             this.BtnSalir.TabIndex = 24;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // BtnCancelar
             // 
@@ -93,6 +88,7 @@
             this.BtnCancelar.TabIndex = 23;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnAceptar
             // 
@@ -109,6 +105,7 @@
             this.BtnAceptar.TabIndex = 22;
             this.BtnAceptar.Text = "Aceptar";
             this.BtnAceptar.UseVisualStyleBackColor = false;
+            this.BtnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // BtnBoCliente
             // 
@@ -178,81 +175,27 @@
             this.BtnActualizar.UseVisualStyleBackColor = false;
             this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
-            // PborrarMascota
-            // 
-            this.PborrarMascota.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PborrarMascota.Controls.Add(this.Cmb_Borrarmascota);
-            this.PborrarMascota.Location = new System.Drawing.Point(242, 186);
-            this.PborrarMascota.Name = "PborrarMascota";
-            this.PborrarMascota.Size = new System.Drawing.Size(202, 37);
-            this.PborrarMascota.TabIndex = 27;
-            this.PborrarMascota.Visible = false;
-            // 
-            // Cmb_Borrarmascota
-            // 
-            this.Cmb_Borrarmascota.FormattingEnabled = true;
-            this.Cmb_Borrarmascota.Items.AddRange(new object[] {
-            "Amarillo",
-            "Azul",
-            "Rojo",
-            "Verde",
-            "Negro"});
-            this.Cmb_Borrarmascota.Location = new System.Drawing.Point(4, 6);
-            this.Cmb_Borrarmascota.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_Borrarmascota.Name = "Cmb_Borrarmascota";
-            this.Cmb_Borrarmascota.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_Borrarmascota.TabIndex = 6;
-            // 
-            // PactualizarMas
-            // 
-            this.PactualizarMas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PactualizarMas.Controls.Add(this.Cmb_AMascota);
-            this.PactualizarMas.Location = new System.Drawing.Point(242, 132);
-            this.PactualizarMas.Name = "PactualizarMas";
-            this.PactualizarMas.Size = new System.Drawing.Size(202, 37);
-            this.PactualizarMas.TabIndex = 26;
-            this.PactualizarMas.Visible = false;
-            // 
-            // Cmb_AMascota
-            // 
-            this.Cmb_AMascota.FormattingEnabled = true;
-            this.Cmb_AMascota.Items.AddRange(new object[] {
-            "Amarillo",
-            "Azul",
-            "Rojo",
-            "Verde",
-            "Negro"});
-            this.Cmb_AMascota.Location = new System.Drawing.Point(4, 4);
-            this.Cmb_AMascota.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_AMascota.Name = "Cmb_AMascota";
-            this.Cmb_AMascota.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_AMascota.TabIndex = 6;
-            // 
             // PvMascota
             // 
             this.PvMascota.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PvMascota.Controls.Add(this.Cmb_LeerMascota);
-            this.PvMascota.Location = new System.Drawing.Point(242, 79);
+            this.PvMascota.Controls.Add(this.ListaMascotas);
+            this.PvMascota.Location = new System.Drawing.Point(308, 24);
             this.PvMascota.Name = "PvMascota";
             this.PvMascota.Size = new System.Drawing.Size(202, 37);
             this.PvMascota.TabIndex = 25;
-            this.PvMascota.Visible = false;
             this.PvMascota.Paint += new System.Windows.Forms.PaintEventHandler(this.PvMascota_Paint);
             // 
-            // Cmb_LeerMascota
+            // ListaMascotas
             // 
-            this.Cmb_LeerMascota.FormattingEnabled = true;
-            this.Cmb_LeerMascota.Items.AddRange(new object[] {
-            "Hola\t",
-            "que",
-            "hace",
-            "todo",
-            "bien?"});
-            this.Cmb_LeerMascota.Location = new System.Drawing.Point(4, 4);
-            this.Cmb_LeerMascota.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_LeerMascota.Name = "Cmb_LeerMascota";
-            this.Cmb_LeerMascota.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_LeerMascota.TabIndex = 6;
+            this.ListaMascotas.DisplayMember = "Nombre";
+            this.ListaMascotas.FormattingEnabled = true;
+            this.ListaMascotas.Location = new System.Drawing.Point(4, 4);
+            this.ListaMascotas.Margin = new System.Windows.Forms.Padding(4);
+            this.ListaMascotas.Name = "ListaMascotas";
+            this.ListaMascotas.Size = new System.Drawing.Size(180, 21);
+            this.ListaMascotas.TabIndex = 6;
+            this.ListaMascotas.Text = "Mascotas";
+            this.ListaMascotas.SelectedIndexChanged += new System.EventHandler(this.ListaMascotas_SelectedIndexChanged);
             // 
             // PMascota
             // 
@@ -270,11 +213,27 @@
             this.PMascota.Controls.Add(this.LatIpERRO);
             this.PMascota.Controls.Add(this.label2);
             this.PMascota.Controls.Add(this.label1);
-            this.PMascota.Location = new System.Drawing.Point(231, 27);
+            this.PMascota.Location = new System.Drawing.Point(243, 79);
             this.PMascota.Name = "PMascota";
             this.PMascota.Size = new System.Drawing.Size(313, 272);
             this.PMascota.TabIndex = 28;
-            this.PMascota.Visible = false;
+            // 
+            // TxtMedida
+            // 
+            this.TxtMedida.Location = new System.Drawing.Point(126, 215);
+            this.TxtMedida.Name = "TxtMedida";
+            this.TxtMedida.Size = new System.Drawing.Size(141, 20);
+            this.TxtMedida.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(11, 219);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 16);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Medida:";
             // 
             // TxtPesoan
             // 
@@ -373,23 +332,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Identificacion:";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(11, 219);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 16);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Medida:";
-            // 
-            // TxtMedida
-            // 
-            this.TxtMedida.Location = new System.Drawing.Point(126, 215);
-            this.TxtMedida.Name = "TxtMedida";
-            this.TxtMedida.Size = new System.Drawing.Size(141, 20);
-            this.TxtMedida.TabIndex = 13;
-            // 
             // CrudMascota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,8 +339,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(568, 482);
             this.Controls.Add(this.PMascota);
-            this.Controls.Add(this.PborrarMascota);
-            this.Controls.Add(this.PactualizarMas);
             this.Controls.Add(this.PvMascota);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnCancelar);
@@ -411,8 +351,6 @@
             this.Name = "CrudMascota";
             this.Text = "CrudMascota";
             this.Load += new System.EventHandler(this.CrudMascota_Load);
-            this.PborrarMascota.ResumeLayout(false);
-            this.PactualizarMas.ResumeLayout(false);
             this.PvMascota.ResumeLayout(false);
             this.PMascota.ResumeLayout(false);
             this.PMascota.PerformLayout();
@@ -429,12 +367,8 @@
         private System.Windows.Forms.Button BtnCcliente;
         private System.Windows.Forms.Button Btnleercliente;
         private System.Windows.Forms.Button BtnActualizar;
-        private System.Windows.Forms.Panel PborrarMascota;
-        private System.Windows.Forms.ComboBox Cmb_Borrarmascota;
-        private System.Windows.Forms.Panel PactualizarMas;
-        private System.Windows.Forms.ComboBox Cmb_AMascota;
         private System.Windows.Forms.Panel PvMascota;
-        private System.Windows.Forms.ComboBox Cmb_LeerMascota;
+        private System.Windows.Forms.ComboBox ListaMascotas;
         private System.Windows.Forms.Panel PMascota;
         private System.Windows.Forms.TextBox TxtPesoan;
         private System.Windows.Forms.TextBox TxtRazaAn;

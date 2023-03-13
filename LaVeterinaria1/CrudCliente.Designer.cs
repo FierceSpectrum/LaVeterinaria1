@@ -34,11 +34,7 @@
             this.BtnCcliente = new System.Windows.Forms.Button();
             this.BtnBoCliente = new System.Windows.Forms.Button();
             this.PVercliente = new System.Windows.Forms.Panel();
-            this.Cmb_Leercliente = new System.Windows.Forms.ComboBox();
-            this.Pactualizar = new System.Windows.Forms.Panel();
-            this.Cmb_Acliente = new System.Windows.Forms.ComboBox();
-            this.PborrarCliente = new System.Windows.Forms.Panel();
-            this.Cmb_BorrarCliente = new System.Windows.Forms.ComboBox();
+            this.ListaClientes = new System.Windows.Forms.ComboBox();
             this.BtnAceptar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
@@ -55,8 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PVercliente.SuspendLayout();
-            this.Pactualizar.SuspendLayout();
-            this.PborrarCliente.SuspendLayout();
             this.PCcliente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,77 +124,24 @@
             // 
             // PVercliente
             // 
-            this.PVercliente.Controls.Add(this.Cmb_Leercliente);
-            this.PVercliente.Location = new System.Drawing.Point(257, 99);
+            this.PVercliente.Controls.Add(this.ListaClientes);
+            this.PVercliente.Location = new System.Drawing.Point(315, 47);
             this.PVercliente.Name = "PVercliente";
             this.PVercliente.Size = new System.Drawing.Size(202, 37);
             this.PVercliente.TabIndex = 11;
-            this.PVercliente.Visible = false;
             this.PVercliente.Paint += new System.Windows.Forms.PaintEventHandler(this.PVercliente_Paint);
             // 
-            // Cmb_Leercliente
+            // ListaClientes
             // 
-            this.Cmb_Leercliente.FormattingEnabled = true;
-            this.Cmb_Leercliente.Items.AddRange(new object[] {
-            "Hola\t",
-            "que",
-            "hace",
-            "todo",
-            "bien?"});
-            this.Cmb_Leercliente.Location = new System.Drawing.Point(4, 4);
-            this.Cmb_Leercliente.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_Leercliente.Name = "Cmb_Leercliente";
-            this.Cmb_Leercliente.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_Leercliente.TabIndex = 6;
-            this.Cmb_Leercliente.SelectedIndexChanged += new System.EventHandler(this.Cmb_Leercliente_SelectedIndexChanged);
-            // 
-            // Pactualizar
-            // 
-            this.Pactualizar.Controls.Add(this.Cmb_Acliente);
-            this.Pactualizar.Location = new System.Drawing.Point(257, 152);
-            this.Pactualizar.Name = "Pactualizar";
-            this.Pactualizar.Size = new System.Drawing.Size(202, 37);
-            this.Pactualizar.TabIndex = 12;
-            this.Pactualizar.Visible = false;
-            // 
-            // Cmb_Acliente
-            // 
-            this.Cmb_Acliente.FormattingEnabled = true;
-            this.Cmb_Acliente.Items.AddRange(new object[] {
-            "Amarillo",
-            "Azul",
-            "Rojo",
-            "Verde",
-            "Negro"});
-            this.Cmb_Acliente.Location = new System.Drawing.Point(4, 4);
-            this.Cmb_Acliente.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_Acliente.Name = "Cmb_Acliente";
-            this.Cmb_Acliente.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_Acliente.TabIndex = 6;
-            // 
-            // PborrarCliente
-            // 
-            this.PborrarCliente.Controls.Add(this.Cmb_BorrarCliente);
-            this.PborrarCliente.Location = new System.Drawing.Point(257, 206);
-            this.PborrarCliente.Name = "PborrarCliente";
-            this.PborrarCliente.Size = new System.Drawing.Size(202, 37);
-            this.PborrarCliente.TabIndex = 12;
-            this.PborrarCliente.Visible = false;
-            // 
-            // Cmb_BorrarCliente
-            // 
-            this.Cmb_BorrarCliente.FormattingEnabled = true;
-            this.Cmb_BorrarCliente.Items.AddRange(new object[] {
-            "Amarillo",
-            "Azul",
-            "Rojo",
-            "Verde",
-            "Negro"});
-            this.Cmb_BorrarCliente.Location = new System.Drawing.Point(4, 6);
-            this.Cmb_BorrarCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_BorrarCliente.Name = "Cmb_BorrarCliente";
-            this.Cmb_BorrarCliente.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_BorrarCliente.TabIndex = 6;
+            this.ListaClientes.DisplayMember = "Nombre";
+            this.ListaClientes.FormattingEnabled = true;
+            this.ListaClientes.Location = new System.Drawing.Point(4, 4);
+            this.ListaClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.ListaClientes.Name = "ListaClientes";
+            this.ListaClientes.Size = new System.Drawing.Size(180, 21);
+            this.ListaClientes.TabIndex = 6;
+            this.ListaClientes.Text = "Clientes";
+            this.ListaClientes.SelectedIndexChanged += new System.EventHandler(this.Cmb_Leercliente_SelectedIndexChanged);
             // 
             // BtnAceptar
             // 
@@ -217,6 +158,7 @@
             this.BtnAceptar.TabIndex = 14;
             this.BtnAceptar.Text = "Aceptar";
             this.BtnAceptar.UseVisualStyleBackColor = false;
+            this.BtnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // BtnCancelar
             // 
@@ -233,6 +175,7 @@
             this.BtnCancelar.TabIndex = 15;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnSalir
             // 
@@ -249,10 +192,11 @@
             this.BtnSalir.TabIndex = 16;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // PCcliente
             // 
-            this.PCcliente.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PCcliente.BackColor = System.Drawing.Color.White;
             this.PCcliente.Controls.Add(this.TxtDireccion);
             this.PCcliente.Controls.Add(this.TxtTelefono);
             this.PCcliente.Controls.Add(this.TxtApellido);
@@ -264,11 +208,10 @@
             this.PCcliente.Controls.Add(this.label3);
             this.PCcliente.Controls.Add(this.label2);
             this.PCcliente.Controls.Add(this.label1);
-            this.PCcliente.Location = new System.Drawing.Point(257, 50);
+            this.PCcliente.Location = new System.Drawing.Point(235, 102);
             this.PCcliente.Name = "PCcliente";
             this.PCcliente.Size = new System.Drawing.Size(313, 220);
             this.PCcliente.TabIndex = 28;
-            this.PCcliente.Visible = false;
             // 
             // TxtDireccion
             // 
@@ -376,8 +319,6 @@
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnAceptar);
-            this.Controls.Add(this.PborrarCliente);
-            this.Controls.Add(this.Pactualizar);
             this.Controls.Add(this.PVercliente);
             this.Controls.Add(this.BtnBoCliente);
             this.Controls.Add(this.BtnCcliente);
@@ -387,8 +328,6 @@
             this.Name = "CrudCliente";
             this.Text = "CrudCliente";
             this.PVercliente.ResumeLayout(false);
-            this.Pactualizar.ResumeLayout(false);
-            this.PborrarCliente.ResumeLayout(false);
             this.PCcliente.ResumeLayout(false);
             this.PCcliente.PerformLayout();
             this.ResumeLayout(false);
@@ -402,14 +341,10 @@
         private System.Windows.Forms.Button BtnCcliente;
         private System.Windows.Forms.Button BtnBoCliente;
         private System.Windows.Forms.Panel PVercliente;
-        private System.Windows.Forms.Panel Pactualizar;
-        private System.Windows.Forms.Panel PborrarCliente;
         private System.Windows.Forms.Button BtnAceptar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnSalir;
-        private System.Windows.Forms.ComboBox Cmb_Leercliente;
-        private System.Windows.Forms.ComboBox Cmb_Acliente;
-        private System.Windows.Forms.ComboBox Cmb_BorrarCliente;
+        private System.Windows.Forms.ComboBox ListaClientes;
         private System.Windows.Forms.Panel PCcliente;
         private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.TextBox TxtTelefono;

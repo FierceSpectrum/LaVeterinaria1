@@ -85,10 +85,6 @@ namespace LaVeterinaria1
                     PSubmenu.Visible = true;
                     break;
             }
-            if (this.PContenedor.Controls.Count > 0)
-            {
-                this.PContenedor.Controls.RemoveAt(0);
-            }
         }
 
         private void BtnEnfermedad_Click(object sender, EventArgs e)
@@ -115,10 +111,6 @@ namespace LaVeterinaria1
                     CerrarVentanas();
                     SubReportes.Visible = true;
                     break;
-            }
-            if (this.PContenedor.Controls.Count > 0)
-            {
-                this.PContenedor.Controls.RemoveAt(0);
             }
         }
 
@@ -161,10 +153,6 @@ namespace LaVeterinaria1
                     Subcrud.Visible = true;
                     break;
             }
-            if (this.PContenedor.Controls.Count > 0)
-            {
-                this.PContenedor.Controls.RemoveAt(0);
-            }
         }
 
         private void BtnEdicliente_Click(object sender, EventArgs e)
@@ -184,11 +172,13 @@ namespace LaVeterinaria1
         private void BtnEdenfermedad_Click(object sender, EventArgs e)
         {
             CerrarVentanas();
+            Funciones.Abrirfh(new CrudEnfermedad(), this.PContenedor);
         }
 
         private void BtnEmedicamentos_Click(object sender, EventArgs e)
         {
             CerrarVentanas();
+            Funciones.Abrirfh(new CrudMedicamentos(), this.PContenedor);
         }
     }
 }

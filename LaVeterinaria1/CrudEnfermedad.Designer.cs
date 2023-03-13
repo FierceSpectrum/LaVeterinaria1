@@ -36,20 +36,14 @@
             this.BtnCrearEnfermedad = new System.Windows.Forms.Button();
             this.BtnLeerEnfermedad = new System.Windows.Forms.Button();
             this.BtnActualizarEnfermedad = new System.Windows.Forms.Button();
-            this.PBorenfe = new System.Windows.Forms.Panel();
-            this.Cmb_Borrarenfe = new System.Windows.Forms.ComboBox();
-            this.Pactuenfe = new System.Windows.Forms.Panel();
-            this.Cmb_AEnfe = new System.Windows.Forms.ComboBox();
             this.PverEnfe = new System.Windows.Forms.Panel();
-            this.Cmb_Leerenfe = new System.Windows.Forms.ComboBox();
+            this.ListaEnfermedades = new System.Windows.Forms.ComboBox();
             this.PEnfermedad = new System.Windows.Forms.Panel();
             this.Txtenfermedad = new System.Windows.Forms.TextBox();
             this.TxtNombreAnimal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.PBorenfe.SuspendLayout();
-            this.Pactuenfe.SuspendLayout();
             this.PverEnfe.SuspendLayout();
             this.PEnfermedad.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +63,7 @@
             this.BtnSalir.TabIndex = 23;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // BtnCancelar
             // 
@@ -85,6 +80,7 @@
             this.BtnCancelar.TabIndex = 22;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnAceptar
             // 
@@ -101,6 +97,7 @@
             this.BtnAceptar.TabIndex = 21;
             this.BtnAceptar.Text = "Aceptar";
             this.BtnAceptar.UseVisualStyleBackColor = false;
+            this.BtnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // BtnBorrarEnfermedad
             // 
@@ -170,80 +167,26 @@
             this.BtnActualizarEnfermedad.UseVisualStyleBackColor = false;
             this.BtnActualizarEnfermedad.Click += new System.EventHandler(this.BtnActualizarEnfermedad_Click);
             // 
-            // PBorenfe
-            // 
-            this.PBorenfe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PBorenfe.Controls.Add(this.Cmb_Borrarenfe);
-            this.PBorenfe.Location = new System.Drawing.Point(341, 207);
-            this.PBorenfe.Name = "PBorenfe";
-            this.PBorenfe.Size = new System.Drawing.Size(202, 37);
-            this.PBorenfe.TabIndex = 25;
-            this.PBorenfe.Visible = false;
-            // 
-            // Cmb_Borrarenfe
-            // 
-            this.Cmb_Borrarenfe.FormattingEnabled = true;
-            this.Cmb_Borrarenfe.Items.AddRange(new object[] {
-            "Amarillo",
-            "Azul",
-            "Rojo",
-            "Verde",
-            "Negro"});
-            this.Cmb_Borrarenfe.Location = new System.Drawing.Point(4, 6);
-            this.Cmb_Borrarenfe.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_Borrarenfe.Name = "Cmb_Borrarenfe";
-            this.Cmb_Borrarenfe.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_Borrarenfe.TabIndex = 6;
-            // 
-            // Pactuenfe
-            // 
-            this.Pactuenfe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Pactuenfe.Controls.Add(this.Cmb_AEnfe);
-            this.Pactuenfe.Location = new System.Drawing.Point(341, 153);
-            this.Pactuenfe.Name = "Pactuenfe";
-            this.Pactuenfe.Size = new System.Drawing.Size(202, 37);
-            this.Pactuenfe.TabIndex = 26;
-            this.Pactuenfe.Visible = false;
-            // 
-            // Cmb_AEnfe
-            // 
-            this.Cmb_AEnfe.FormattingEnabled = true;
-            this.Cmb_AEnfe.Items.AddRange(new object[] {
-            "Amarillo",
-            "Azul",
-            "Rojo",
-            "Verde",
-            "Negro"});
-            this.Cmb_AEnfe.Location = new System.Drawing.Point(4, 4);
-            this.Cmb_AEnfe.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_AEnfe.Name = "Cmb_AEnfe";
-            this.Cmb_AEnfe.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_AEnfe.TabIndex = 6;
-            // 
             // PverEnfe
             // 
             this.PverEnfe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PverEnfe.Controls.Add(this.Cmb_Leerenfe);
-            this.PverEnfe.Location = new System.Drawing.Point(341, 100);
+            this.PverEnfe.Controls.Add(this.ListaEnfermedades);
+            this.PverEnfe.Location = new System.Drawing.Point(362, 59);
             this.PverEnfe.Name = "PverEnfe";
             this.PverEnfe.Size = new System.Drawing.Size(202, 37);
             this.PverEnfe.TabIndex = 24;
-            this.PverEnfe.Visible = false;
             // 
-            // Cmb_Leerenfe
+            // ListaEnfermedades
             // 
-            this.Cmb_Leerenfe.FormattingEnabled = true;
-            this.Cmb_Leerenfe.Items.AddRange(new object[] {
-            "Hola\t",
-            "que",
-            "hace",
-            "todo",
-            "bien?"});
-            this.Cmb_Leerenfe.Location = new System.Drawing.Point(4, 4);
-            this.Cmb_Leerenfe.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_Leerenfe.Name = "Cmb_Leerenfe";
-            this.Cmb_Leerenfe.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_Leerenfe.TabIndex = 6;
+            this.ListaEnfermedades.DisplayMember = "NEfermedad";
+            this.ListaEnfermedades.FormattingEnabled = true;
+            this.ListaEnfermedades.Location = new System.Drawing.Point(4, 4);
+            this.ListaEnfermedades.Margin = new System.Windows.Forms.Padding(4);
+            this.ListaEnfermedades.Name = "ListaEnfermedades";
+            this.ListaEnfermedades.Size = new System.Drawing.Size(180, 21);
+            this.ListaEnfermedades.TabIndex = 6;
+            this.ListaEnfermedades.Text = "Enfermedades";
+            this.ListaEnfermedades.SelectedIndexChanged += new System.EventHandler(this.ListaEnfermedades_SelectedIndexChanged);
             // 
             // PEnfermedad
             // 
@@ -253,11 +196,10 @@
             this.PEnfermedad.Controls.Add(this.label7);
             this.PEnfermedad.Controls.Add(this.label8);
             this.PEnfermedad.Controls.Add(this.label9);
-            this.PEnfermedad.Location = new System.Drawing.Point(316, 48);
+            this.PEnfermedad.Location = new System.Drawing.Point(297, 113);
             this.PEnfermedad.Name = "PEnfermedad";
             this.PEnfermedad.Size = new System.Drawing.Size(313, 172);
             this.PEnfermedad.TabIndex = 28;
-            this.PEnfermedad.Visible = false;
             // 
             // Txtenfermedad
             // 
@@ -300,9 +242,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(22, 56);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 16);
+            this.label9.Size = new System.Drawing.Size(114, 16);
             this.label9.TabIndex = 1;
-            this.label9.Text = "Nombre Animal:";
+            this.label9.Text = "Nombre Mascota:";
             // 
             // CrudEnfermedad
             // 
@@ -311,8 +253,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(641, 525);
             this.Controls.Add(this.PEnfermedad);
-            this.Controls.Add(this.PBorenfe);
-            this.Controls.Add(this.Pactuenfe);
             this.Controls.Add(this.PverEnfe);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnCancelar);
@@ -324,8 +264,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CrudEnfermedad";
             this.Text = "CrudEnfermedad";
-            this.PBorenfe.ResumeLayout(false);
-            this.Pactuenfe.ResumeLayout(false);
             this.PverEnfe.ResumeLayout(false);
             this.PEnfermedad.ResumeLayout(false);
             this.PEnfermedad.PerformLayout();
@@ -342,12 +280,8 @@
         private System.Windows.Forms.Button BtnCrearEnfermedad;
         private System.Windows.Forms.Button BtnLeerEnfermedad;
         private System.Windows.Forms.Button BtnActualizarEnfermedad;
-        private System.Windows.Forms.Panel PBorenfe;
-        private System.Windows.Forms.ComboBox Cmb_Borrarenfe;
-        private System.Windows.Forms.Panel Pactuenfe;
-        private System.Windows.Forms.ComboBox Cmb_AEnfe;
         private System.Windows.Forms.Panel PverEnfe;
-        private System.Windows.Forms.ComboBox Cmb_Leerenfe;
+        private System.Windows.Forms.ComboBox ListaEnfermedades;
         private System.Windows.Forms.Panel PEnfermedad;
         private System.Windows.Forms.TextBox Txtenfermedad;
         private System.Windows.Forms.TextBox TxtNombreAnimal;

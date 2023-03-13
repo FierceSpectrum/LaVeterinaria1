@@ -60,6 +60,19 @@ namespace LaVeterinaria1
                 return true;
             }else { return false; }
         }
+        public static void EliminarArchivo(List<Cliente> Cliente)
+        {
+            StreamWriter writer = new StreamWriter("Clientes.txt");
+            int Keys = 1;
+            foreach (Cliente cliente in Cliente)
+            {
+                cliente.Key = Keys;
+                string resultado = cliente.Return_Info();
+                writer.WriteLine(resultado);
+                Keys++;
+            }
+            writer.Close();
+        }
         public string Return_Info()
         {
             string Resultado = Key + ";" +  Identificacion + ";" + Cell + ";" + Nombre + ";" + Appellidos + ";" + Direccion;
@@ -74,7 +87,7 @@ namespace LaVeterinaria1
             while ((line = reader.ReadLine()) != null)
             {
                 string[] valores = line.Split(';');
-                Client = new Cliente(Convert.ToInt16(valores[0]), Convert.ToInt16(valores[1]), Convert.ToInt16(valores[2]), valores[3], valores[4], valores[5]);
+                Client = new Cliente(Convert.ToInt32(valores[0]), Convert.ToInt32(valores[1]), Convert.ToInt32(valores[2]), valores[3], valores[4], valores[5]);
                 Cliente.Add(Client);
             }
             reader.Close();
@@ -150,7 +163,7 @@ namespace LaVeterinaria1
         public static bool Guardar_Mascota(Mascota Mascota)
         {
             Mascota.Key = (Return_Key());
-            if (Verificar_IdCliente(Mascota.IdCliente) != true)
+            if (Verificar_IdCliente(Mascota.IdCliente))
             {
                 StreamWriter writer;
                 string RutaArchuivo = "Mascotas.txt";
@@ -169,6 +182,19 @@ namespace LaVeterinaria1
                 return true;
             }
             else { return false; }
+        }
+        public static void EliminarArchivo(List<Mascota> Mascota)
+        {
+            StreamWriter writer = new StreamWriter("Mascotas.txt");
+            int Keys = 1;
+            foreach (Mascota mascota in Mascota)
+            {
+                mascota.Key = Keys;
+                string resultado = mascota.Return_Info();
+                writer.WriteLine(resultado);
+                Keys++;
+            }
+            writer.Close();
         }
         public string Return_Info()
         {
@@ -192,10 +218,10 @@ namespace LaVeterinaria1
         }
         public static bool Verificar_IdCliente(int IdCliente)
         {
-            List<Mascota> Mascota = Cargar_Mascota();
-            foreach (Mascota Pet in Mascota)
+            List<Cliente> Clientes = Cliente.Cargar_Cliente();
+            foreach (Cliente Cliente in Clientes)
             {
-                int ID = Pet.IdCliente;
+                int ID = Cliente.Identificacion;
                 if (IdCliente == ID)
                 {
                     return true;

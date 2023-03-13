@@ -36,7 +36,7 @@ namespace LaVeterinaria1
         public static bool Guardar_Enfermedad(Enfermedad Enfermedad)
         {
             Enfermedad.Key = Return_Key();
-            if (Verificar_IdCliente(Enfermedad.IdMascota) != true)
+            if (Verificar_IdCliente(Enfermedad.IdMascota))
             {
                 StreamWriter writer;
                 string RutaArchuivo = "Enfermedades.txt";
@@ -55,6 +55,19 @@ namespace LaVeterinaria1
                 return true;
             }
             else { return false; }
+        }
+        public static void EliminarArchivo(List<Enfermedad> Enfermedad)
+        {
+            StreamWriter writer = new StreamWriter("Enfermedades.txt");
+            int Keys = 1;
+            foreach (Enfermedad enfermedad in Enfermedad)
+            {
+                enfermedad.Key = Keys;
+                string resultado = enfermedad.Return_Info();
+                writer.WriteLine(resultado);
+                Keys++;
+            }
+            writer.Close();
         }
         public string Return_Info()
         {
@@ -135,7 +148,7 @@ namespace LaVeterinaria1
         public static bool Guardar_Medicamento(Medicamento Medicamento)
         {
             Medicamento.Key = Return_Key();
-            if (Verificar_IdCliente(Medicamento.IdEfermedad) != true)
+            if (Verificar_IdCliente(Medicamento.IdEfermedad))
             {
                 StreamWriter writer;
                 string RutaArchuivo = "Medicamentos.txt";
@@ -154,6 +167,19 @@ namespace LaVeterinaria1
                 return true;
             }
             else { return false; }
+        }
+        public static void EliminarArchivo(List<Medicamento> Medicamento)
+        {
+            StreamWriter writer = new StreamWriter("Medicamentos.txt");
+            int Keys = 1;
+            foreach (Medicamento medicamento in Medicamento)
+            {
+                medicamento.Key = Keys;
+                string resultado = medicamento.Return_Info();
+                writer.WriteLine(resultado);
+                Keys++;
+            }
+            writer.Close();
         }
         public string Return_Info()
         {
@@ -177,11 +203,10 @@ namespace LaVeterinaria1
         }
         public static bool Verificar_IdCliente(int IdCliente)
         {
-            List<Medicamento> Medicamento = Cargar_Medicamento();
-            foreach (Medicamento Medicine in Medicamento)
+            List<Enfermedad> Enfermedades = Enfermedad.Cargar_Enfermedad();
+            foreach (Enfermedad Enfermedad in Enfermedades)
             {
-                int ID = Medicine.IdEfermedad;
-                if (IdCliente == ID)
+                if (IdCliente == Enfermedad.IdMascota)
                 {
                     return true;
                 }

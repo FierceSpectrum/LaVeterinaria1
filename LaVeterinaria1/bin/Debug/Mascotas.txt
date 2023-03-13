@@ -1,0 +1,2 @@
+1;simon;perro;noc;14;57;4596
+2;simon2;gato;waer;55;46;4596

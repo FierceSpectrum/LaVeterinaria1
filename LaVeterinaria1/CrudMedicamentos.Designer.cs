@@ -36,12 +36,8 @@
             this.BtnMedicamento = new System.Windows.Forms.Button();
             this.BtnleerMedi = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
-            this.PBormedi = new System.Windows.Forms.Panel();
-            this.Cmb_Borrarmedi = new System.Windows.Forms.ComboBox();
-            this.PAmedicamento = new System.Windows.Forms.Panel();
-            this.Cmb_Amedi = new System.Windows.Forms.ComboBox();
             this.PverMedi = new System.Windows.Forms.Panel();
-            this.Cmb_Leermedi = new System.Windows.Forms.ComboBox();
+            this.ListaMedicamentos = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,8 +46,6 @@
             this.PMedicamento = new System.Windows.Forms.Panel();
             this.TxtEnfermedad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.PBormedi.SuspendLayout();
-            this.PAmedicamento.SuspendLayout();
             this.PverMedi.SuspendLayout();
             this.PMedicamento.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +65,7 @@
             this.BtnSalir.TabIndex = 23;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // BtnCancelar
             // 
@@ -87,6 +82,7 @@
             this.BtnCancelar.TabIndex = 22;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnAceptar
             // 
@@ -103,6 +99,7 @@
             this.BtnAceptar.TabIndex = 21;
             this.BtnAceptar.Text = "Aceptar";
             this.BtnAceptar.UseVisualStyleBackColor = false;
+            this.BtnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // BtnBorrarmedi
             // 
@@ -172,80 +169,26 @@
             this.BtnActualizar.UseVisualStyleBackColor = false;
             this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
-            // PBormedi
-            // 
-            this.PBormedi.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PBormedi.Controls.Add(this.Cmb_Borrarmedi);
-            this.PBormedi.Location = new System.Drawing.Point(366, 182);
-            this.PBormedi.Name = "PBormedi";
-            this.PBormedi.Size = new System.Drawing.Size(202, 37);
-            this.PBormedi.TabIndex = 31;
-            this.PBormedi.Visible = false;
-            // 
-            // Cmb_Borrarmedi
-            // 
-            this.Cmb_Borrarmedi.FormattingEnabled = true;
-            this.Cmb_Borrarmedi.Items.AddRange(new object[] {
-            "Amarillo",
-            "Azul",
-            "Rojo",
-            "Verde",
-            "Negro"});
-            this.Cmb_Borrarmedi.Location = new System.Drawing.Point(4, 6);
-            this.Cmb_Borrarmedi.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_Borrarmedi.Name = "Cmb_Borrarmedi";
-            this.Cmb_Borrarmedi.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_Borrarmedi.TabIndex = 6;
-            // 
-            // PAmedicamento
-            // 
-            this.PAmedicamento.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PAmedicamento.Controls.Add(this.Cmb_Amedi);
-            this.PAmedicamento.Location = new System.Drawing.Point(366, 128);
-            this.PAmedicamento.Name = "PAmedicamento";
-            this.PAmedicamento.Size = new System.Drawing.Size(202, 37);
-            this.PAmedicamento.TabIndex = 32;
-            this.PAmedicamento.Visible = false;
-            // 
-            // Cmb_Amedi
-            // 
-            this.Cmb_Amedi.FormattingEnabled = true;
-            this.Cmb_Amedi.Items.AddRange(new object[] {
-            "Amarillo",
-            "Azul",
-            "Rojo",
-            "Verde",
-            "Negro"});
-            this.Cmb_Amedi.Location = new System.Drawing.Point(4, 4);
-            this.Cmb_Amedi.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_Amedi.Name = "Cmb_Amedi";
-            this.Cmb_Amedi.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_Amedi.TabIndex = 6;
-            // 
             // PverMedi
             // 
             this.PverMedi.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PverMedi.Controls.Add(this.Cmb_Leermedi);
-            this.PverMedi.Location = new System.Drawing.Point(366, 75);
+            this.PverMedi.Controls.Add(this.ListaMedicamentos);
+            this.PverMedi.Location = new System.Drawing.Point(356, 47);
             this.PverMedi.Name = "PverMedi";
             this.PverMedi.Size = new System.Drawing.Size(202, 37);
             this.PverMedi.TabIndex = 30;
-            this.PverMedi.Visible = false;
             // 
-            // Cmb_Leermedi
+            // ListaMedicamentos
             // 
-            this.Cmb_Leermedi.FormattingEnabled = true;
-            this.Cmb_Leermedi.Items.AddRange(new object[] {
-            "Hola\t",
-            "que",
-            "hace",
-            "todo",
-            "bien?"});
-            this.Cmb_Leermedi.Location = new System.Drawing.Point(4, 4);
-            this.Cmb_Leermedi.Margin = new System.Windows.Forms.Padding(4);
-            this.Cmb_Leermedi.Name = "Cmb_Leermedi";
-            this.Cmb_Leermedi.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_Leermedi.TabIndex = 6;
+            this.ListaMedicamentos.DisplayMember = "NMedicamento";
+            this.ListaMedicamentos.FormattingEnabled = true;
+            this.ListaMedicamentos.Location = new System.Drawing.Point(4, 4);
+            this.ListaMedicamentos.Margin = new System.Windows.Forms.Padding(4);
+            this.ListaMedicamentos.Name = "ListaMedicamentos";
+            this.ListaMedicamentos.Size = new System.Drawing.Size(180, 21);
+            this.ListaMedicamentos.TabIndex = 6;
+            this.ListaMedicamentos.Text = "Medicamentos";
+            this.ListaMedicamentos.SelectedIndexChanged += new System.EventHandler(this.ListaMedicamentos_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -302,11 +245,10 @@
             this.PMedicamento.Controls.Add(this.label7);
             this.PMedicamento.Controls.Add(this.label8);
             this.PMedicamento.Controls.Add(this.label9);
-            this.PMedicamento.Location = new System.Drawing.Point(291, 26);
+            this.PMedicamento.Location = new System.Drawing.Point(291, 108);
             this.PMedicamento.Name = "PMedicamento";
             this.PMedicamento.Size = new System.Drawing.Size(313, 172);
             this.PMedicamento.TabIndex = 29;
-            this.PMedicamento.Visible = false;
             // 
             // TxtEnfermedad
             // 
@@ -331,8 +273,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(616, 480);
-            this.Controls.Add(this.PBormedi);
-            this.Controls.Add(this.PAmedicamento);
             this.Controls.Add(this.PverMedi);
             this.Controls.Add(this.PMedicamento);
             this.Controls.Add(this.BtnSalir);
@@ -345,8 +285,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CrudMedicamentos";
             this.Text = "CrudMedicamentos";
-            this.PBormedi.ResumeLayout(false);
-            this.PAmedicamento.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.CrudMedicamentos_Load);
             this.PverMedi.ResumeLayout(false);
             this.PMedicamento.ResumeLayout(false);
             this.PMedicamento.PerformLayout();
@@ -363,12 +302,8 @@
         private System.Windows.Forms.Button BtnMedicamento;
         private System.Windows.Forms.Button BtnleerMedi;
         private System.Windows.Forms.Button BtnActualizar;
-        private System.Windows.Forms.Panel PBormedi;
-        private System.Windows.Forms.ComboBox Cmb_Borrarmedi;
-        private System.Windows.Forms.Panel PAmedicamento;
-        private System.Windows.Forms.ComboBox Cmb_Amedi;
         private System.Windows.Forms.Panel PverMedi;
-        private System.Windows.Forms.ComboBox Cmb_Leermedi;
+        private System.Windows.Forms.ComboBox ListaMedicamentos;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
